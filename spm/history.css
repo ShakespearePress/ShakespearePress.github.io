@@ -1,0 +1,603 @@
+/* 
+        SPM WEBSITE
+
+            GRC 339 - SPRING 2019
+
+        >RACHEL LACKMANN
+        >STEVEN NGUYEN
+        >SARAH KOEP
+                                    */
+
+/* CSS BASE CODE < CHANGE THIS TO TITLE OF PAGE */
+
+/* ------------------------------------ */
+
+/* STYLES LOGO */
+.logo {
+    width: 25em;
+    padding: 2em;
+    float: left;
+    transition: .5s ease-in-out;
+}
+
+/* FADES LOGO ON HOVER */
+.logo:hover {
+    opacity: .8;
+    -webkit-transition: 1s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+/* BODY - APPLYS ALL */
+body {
+    font-family: chivo, sans-serif;
+}
+
+/* HEADER CAPTION */
+dd {
+    margin: 4.8em 0 .5em 0em;
+    min-width: 4.4em;
+    font-family: yeseva one, serif;
+    font-size: 4em;
+    color: #FDF8F2;
+    font-weight: 100;
+    padding: 0 .5em;
+    line-height: 95%;
+}
+
+/* FIRST HEADING LEVEL */
+h1 {
+    font-family: yeseva one, serif;
+    font-size: 3em;
+    color: #495A4A;
+    font-weight: 100;
+    padding: 0em 0em 0em 1em;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+/* SUBHEADING LEVEL */
+h2 {
+    color: #495A4A;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: .5em 1em 0em 1em;
+}
+
+/* FROM HOME PAGEIGNORE */
+h5 {
+    font-size: 1em;
+}
+
+/*BODY TEXT PARAGRAPH*/
+p {
+    padding: 0em 1em 1em 2em;
+    font-size: 1em;
+    width: 30em;
+}
+
+/*COVER IMAGE*/
+.cover {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    z-index: -2;
+    filter: grayscale(100%);
+
+    /* STYLES THE COVER IMAGE */
+    filter: contrast(70%) brightness(50%) sepia(100%) hue-rotate(340deg) saturate(120%);
+}
+
+/* MAKES FONT WEIGHT LIGHTER - SPAN ELEMENT */
+.light {
+    font-weight: 100;
+}
+
+/* MAKES FONT ORANGE - SPAN ELEMENT */
+.orange {
+    color: #E7A373;
+    text-decoration: line-through;
+    text-decoration-color: #CDABA9;
+}
+
+/* STYLES NAV ELEMENTS */
+
+/* NAV CONTAINER */
+header {
+    margin: 0;
+    width: 100%;
+    padding: none;
+    height: 5.1em;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* NAV LINKS */
+a {
+    text-decoration: none;
+}
+
+nav a {
+    color: #FDF8F2;
+    padding: 2em 1.2em .7em 1.3em;
+    font-weight: 700;
+    font-size: 1.1em;
+    letter-spacing: .03em;
+    -webkit-transition: 1s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+/* NAV HOVER HIGHLIGHT ON HOVER */
+nav a:hover {
+    background: #CDABA9;
+    color: #FDF8F2;
+    transition: .5s;
+}
+
+/* NAV LINKS - FLEX BOX */
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+nav ul li {
+    list-style-type: none;
+    flex-direction: row;
+}
+
+.currentpage {
+    color: #E7A373;
+}
+
+
+/* PAGE RIP ELEMENT - SIZE AND ALIGNMENT */
+img.pagerip {
+    min-width: 50em;
+    width: 103%;
+    z-index: 100;
+    position: absolute;
+    margin-left: -1em;
+}
+
+/*SOCIAL ICONS*/
+.socialicons {
+    z-index: 100;
+    float: right;
+    margin-top: -3em;
+}
+
+.socialicons img {
+    width: 2em;
+    margin: .3em;
+    transition: .5s;
+}
+
+.socialicons img:hover {
+    filter: brightness(65%) sepia(100%)hue-rotate(-20deg) saturate(140%);
+    transition: .5s;
+}
+
+/* END OF SOCIAL ICONS */
+
+/* MAIN PAGE CONTENT DIV */
+.pagecontent {
+    padding-top: 7em;
+    position: relative;
+    width: 103vw;
+    margin-top: 4em;
+    background-color: #FDF8F2;
+    z-index: 0;
+    margin-left: -1em;
+    padding-bottom: 2em;
+}
+
+/*CHARLES PALMER BIT*/
+
+.palmer {
+    margin-bottom: 40%;
+    /*prevents the timeline from colliding*/
+    display: block;
+    width: 85%;
+    margin: auto;
+    margin-top: 4em;
+    z-index: 1;
+}
+
+.palmer h1 {
+    margin: 0em 0em -3em 3.4em;
+    font-size: 4em;
+}
+
+.palmer h2 {
+    margin: 7.5em 0 -2em 22.7em;
+    color: #CDABA9;
+    padding-bottom: 2em;
+    margin-bottom:-1em
+}
+
+.palmer p {
+    font-weight: 200;
+    font-size: 1em;
+    line-height: 1.3;
+    float: left;
+    width: 50%;
+    padding-right: 0em;
+    margin-top:0;
+    margin-bottom: 0em;
+    max-width: 50em;
+}
+
+img.palmer {
+    margin-top: -9em;
+    width: 25em;
+    float: left;
+    margin-bottom: 2em;
+    margin-left: 0;
+}
+
+
+/*TIMELINE*/
+
+.timelineline {
+    /*the actual line image*/
+    width: 5em;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    border: none;
+    margin: auto;
+    margin-top: 35em;
+    min-width: 3em;
+}
+
+.timeline {
+    /*the entire timeline*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.time {
+    /*each individual time segment*/
+    padding: 2em 0;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: -1;
+}
+
+.timetext {
+    /*the block on text in each individual time segment*/
+    width: 35%;
+    margin: 0em 0em 0 14em;
+}
+
+/*additional styling of the text in the timeline*/
+.timetext h1 {
+    padding: 0;
+    width: 80%;
+    margin: 0;
+}
+
+.timetext p {
+    width: 80%;
+    padding: 0;
+}
+
+.timeline img {
+    width: 30%;
+    align-self: center;
+    margin: 0 5em;
+}
+
+.time h3 {
+    color: #E7A373;
+    font-family: yeseva one, serif;
+    font-size: 5em;
+    opacity: .6;
+    font-weight: 100;
+    position: relative;
+    z-index: -1;
+    margin: -.8em 0 0 2.5em;
+}
+
+/*END TIMELINE CSS*/
+
+/*IMAGE FLOAT LEFT*/
+img.left {
+    float: left;
+    width: 20em;
+    margin: 0 0 0 2em;
+    opacity: .7;
+}
+
+/*IMAGE FLOAT RIGHT*/
+img.right {
+    float: right;
+    width: 20em;
+    margin: 0 2em 0 0;
+    opacity: .7;
+}
+
+
+/* ------------- FOOTER ---------------- */
+
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #495A4A;
+    padding: 1.5em 1em 1em 1em;
+}
+
+/* NAV LINKS */
+.footerlogo {
+    margin-right: 3em;
+    width: 15em;
+    float: left;
+}
+
+/* FOOTER LINK */
+footer a {
+    text-decoration: none;
+    color: #FDF8F2;
+}
+
+footer a:hover {
+    background: none;
+    color: #E7A373;
+    transition: 1s;
+}
+
+/* FOOTER NAV LINKS */
+footer ul li {
+    margin-left: -1em;
+    padding-bottom: 1em;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* APPLIES LEFT BORDER */
+footer div {
+    margin-left: 5%;
+    padding: none;
+    width: 20%;
+    border-left: 3px solid white;
+    float: left;
+    height: 6em;
+}
+
+/* FOOTER SOCIAL ICONS */
+footer .socialicons {
+    margin-top: 0;
+    width: 13%;
+    float: right;
+    height: 3em;
+    border: none;
+}
+
+/* Footer Copyright Text */
+footer p {
+    display: block;
+    font-size: .75em;
+    font-weight: 100;
+    color: #FDF8F2;
+    padding: 12em 0 1em 0;
+    text-align: left;
+    width: 80em;
+}
+
+/**MEDIA QUERIES**/
+@media only screen and (max-width: 1000px) {
+
+    .palmer p {
+        font-size: 1em;
+        width: 45%;
+        margin: auto;
+        float: right;
+        padding-top: .5em;
+    }
+
+    .timeline {
+        margin-top: 2em;
+        border-top: 5px solid;
+        border-color: #CDABA9;
+    }
+
+    .timetext {
+        width: 45%;
+        margin: 1em 0 0 2em;
+    }
+
+    .timetext img {
+        width: 20em;
+        margin: 1em;
+    }
+
+    .timelineline {
+        visibility: hidden;
+        /*hides the line*/
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    header {
+        height: 10em;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .cover {
+        width: 100%;
+    }
+
+    .logo {
+        float: none;
+        display: block;
+        margin: auto;
+        margin-bottom: -4em;
+        padding: 2em 0 0 0;
+    }
+
+    nav ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 0em auto;
+        align-content: center;
+    }
+
+    nav a:hover {
+        background: none;
+        color: #E7A373;
+    }
+
+    dd {
+        margin: 2em 0 0 0;
+    }
+
+    .cover {
+        min-width: 50em;
+    }
+
+    .pagerip {
+        margin-top: 1.2em;
+    }
+
+
+    /*PALMER MEDIA QUERIES*/
+    div.palmer {
+        margin-bottom: 0;
+        /*no more margin needed since floats are removed*/
+    }
+
+    img.palmer {
+        /*float is removed and image is centered*/
+        float: none;
+        clear: both;
+        margin: auto;
+    }
+
+    .palmer h1 {
+        /*float is removed and text is centered*/
+        float: none;
+        clear: both;
+        margin: auto;
+        text-align: center;
+        padding: 0;
+    }
+
+    .palmer h2 {
+        /*centered text*/
+        margin: auto;
+        padding: 0 0 .5em 0;
+        width: 10em;
+    }
+
+    .palmer p {
+        /*paragraphs are centered*/
+        padding: 1em 0 0 0;
+        float: none;
+        clear: both;
+        margin: auto;
+        width: 80%;
+        font-size: 1em;
+    }
+
+    /*TIMELINE MEDIA QUERIES*/
+
+    .timelineline {
+        /*hides the line image*/
+        visibility: hidden;
+    }
+
+    .timeline {
+        /*adds a top border for visual separation*/
+        margin-top: 2em;
+        border-top: 5px solid;
+        border-color: #CDABA9;
+    }
+
+    .timetext {
+        width: 80%;
+        margin: auto;
+    }
+
+    .timetext p {
+        width: 100%;
+    }
+
+    .timetext h3 {
+        margin-top: -.5em;
+    }
+
+    .time img {
+        width: 20em;
+        margin: 1em auto;
+    }
+
+
+
+    img.right {
+        display: block;
+        float: none;
+        clear: both;
+        margin: auto;
+    }
+
+    img.left {
+        display: block;
+        float: none;
+        clear: both;
+        margin: auto;
+    }
+
+    p {
+        clear: both;
+        width: 80%;
+        margin: auto;
+    }
+
+    .footerlogo {
+        width: 40%;
+        margin: auto;
+    }
+
+    footer div {
+        width: 20%;
+        margin: 0 0 0 1em;
+        height: auto;
+    }
+
+    footer .socialicons {
+        clear: both;
+        float: none;
+        width: 5.5em;
+        margin: auto;
+        padding-top: 1em;
+    }
+
+    footer p {
+        width: 90%;
+        padding-top: 1em;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    .timelineline {
+        visibility: hidden;
+    }
+}

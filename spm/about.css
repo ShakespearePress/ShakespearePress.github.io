@@ -1,0 +1,660 @@
+/* 
+        SPM WEBSITE
+
+            GRC 339 - SPRING 2019
+
+        >RACHEL LACKMANN
+        >STEVEN NGUYEN
+        >SARAH KOEP
+                                    */
+
+/* CSS BASE CODE < CHANGE THIS TO TITLE OF PAGE */
+
+/* ------------------------------------ */
+
+/* STYLES LOGO */
+.logo {
+    width: 25em;
+    padding: 2em;
+    float: left;
+    transition: .5s ease-in-out;
+}
+
+/* FADES LOGO ON HOVER */
+.logo:hover {
+    opacity: .8;
+    -webkit-transition: 1s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+/* BODY - APPLYS ALL */
+body {
+    font-family: chivo, sans-serif;
+    /*** CHANGE IN BASE CODE ****/
+    font-weight: 400;
+}
+
+
+/* HEADER CAPTION */
+dd {
+    margin: 4.8em 0 .5em 0em;
+    min-width: 4.4em;
+    font-family: yeseva one, serif;
+    font-size: 4em;
+    color: #FDF8F2;
+    font-weight: 100;
+    padding: 0 .5em;
+    line-height: 95%;
+}
+
+/* FIRST HEADING LEVEL */
+h1 {
+    font-family: yeseva one, serif;
+    font-size: 3em;
+    color: #495A4A;
+    font-weight: 100;
+    padding: .5em 1em 0em 1em;
+    position: relative;
+    z-index: 1;
+}
+
+/* SUBHEADING LEVEL */
+h2 {
+    color: #495A4A;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: .5em 1em 0em 1em;
+}
+
+/* FROM HOME PAGEIGNORE */
+h5 {
+    font-size: 1em;
+}
+
+/* BODY TEXT PARAGRAPH */
+p {
+    padding: 0em 1em 1em 2em;
+    font-size: 1em;
+    width: 30em;
+}
+
+/* COVER IMAGE */
+.cover {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    z-index: -2;
+    filter: grayscale(100%);
+
+    /* STYLES THE COVER IMAGE */
+    filter: contrast(70%) brightness(50%) sepia(100%) hue-rotate(340deg) saturate(120%);
+}
+
+/* MAKES FONT WEIGHT LIGHTER - SPAN ELEMENT */
+.light {
+    font-weight: 100;
+}
+
+/* MAKES FONT ORANGE - SPAN ELEMENT */
+.orange {
+    color: #E7A373;
+}
+
+/* STYLES NAV ELEMENTS */
+
+/* NAV CONTAINER */
+header {
+    margin: 0;
+    width: 100%;
+    padding: none;
+    height: 5.1em;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* NAV LINKS */
+a {
+    text-decoration: none;
+}
+
+nav a {
+    color: #FDF8F2;
+    padding: 2em 1.2em .7em 1.3em;
+    font-weight: 700;
+    font-size: 1.1em;
+    letter-spacing: .03em;
+
+    /***** NEEDS TO BE ADDED TO BASE CODE *******/
+    -webkit-transition: 1s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+/* NAV HOVER HIGHLIGHT ON HOVER */
+nav a:hover {
+    background: #CDABA9;
+    color: #FDF8F2;
+    -webkit-transition: 1s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+/* NAV LINKS - FLEX BOX */
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+a.currentpage {
+    color: #E7A373;
+}
+
+nav ul li {
+    list-style-type: none;
+    flex-direction: row;
+}
+
+/* PAGE RIP ELEMENT - SIZE AND ALIGNMENT */
+img.pagerip {
+    width: 103%;
+    z-index: 100;
+    position: absolute;
+    margin-top: -1%;
+    margin-left: -1em;
+}
+
+/* SOCIAL ICONS */
+.socialicons {
+    z-index: 100;
+    position:relative;
+    float: right;
+    margin-top: -3em;
+}
+
+.socialicons img {
+    width: 2em;
+    margin: .3em;
+    transition: .5s;
+}
+
+.socialicons img:hover {
+    filter: brightness(65%) sepia(100%)hue-rotate(-20deg) saturate(140%);
+    transition: .5s;
+}
+
+/* END OF SOCIAL ICONS */
+
+/* MAIN PAGE CONTENT DIV */
+.pagecontent {
+    padding-top: 1.5em;
+    position: relative;
+    width: 103vw;
+    margin-top: 4em;
+    background-color: #FDF8F2;
+    z-index: 0;
+    margin-left: -1em;
+    padding-bottom: 20em;
+}
+
+
+/*IMAGE FLOAT LEFT*/
+img.left {
+    float: left;
+    width: 20em;
+    margin: 0 0 0 2em;
+    opacity: .7;
+}
+
+/*IMAGE FLOAT RIGHT*/
+img.right {
+    float: right;
+    width: 20em;
+    margin: -20em 10em 0 0;
+    opacity: .7;
+}
+
+
+/* ------------- FOOTER ---------------- */
+
+footer {
+    position: absolute;
+    margin-top: -11em;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #495A4A;
+
+    padding: 1.5em 1em 1em 1em;
+}
+
+/* NAV LINKS */
+.footerlogo {
+    margin-right: 3em;
+    width: 15em;
+    float: left;
+}
+
+/* FOOTER LINK */
+footer a {
+    text-decoration: none;
+    color: #FDF8F2;
+}
+
+footer a:hover {
+    background: none;
+    color: #E7A373;
+    transition: 1s;
+}
+
+/* FOOTER NAV LINKS */
+footer ul li {
+    margin-left: -1em;
+    padding-bottom: 1em;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* APPLIES LEFT BORDER */
+footer div {
+    margin-left: 5%;
+    padding: none;
+    width: 20%;
+    border-left: 3px solid white;
+    float: left;
+    height: 6em;
+}
+
+/* FOOTER SOCIAL ICONS */
+footer .socialicons {
+    margin: 0em 3em 0em 0em;
+    width: 6em;
+    height: 3em;
+    border: none;
+}
+
+/* Footer Copyright Text */
+footer p {
+    display: block;
+    font-size: .75em;
+    font-weight: 100;
+    color: #FDF8F2;
+    padding: 12em 0 1em 0;
+    text-align: left;
+    width: 80em;
+}
+
+/**MEDIA QUERIES**/
+@media only screen and (max-width: 900px) {
+    header {
+        height: 10em;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .logo {
+        float: none;
+        display: block;
+        margin: auto;
+        margin-bottom: -4em;
+        padding: 2em 0 0 0;
+    }
+
+    nav ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 0em auto;
+        align-content: center;
+    }
+
+    /* ****** NEEDS TO BE ADDED TO BASE CODE ****** */
+    nav a {
+        -webkit-transition: 1s ease-in-out;
+        transition: .5s ease-in-out;
+    }
+
+    nav a:hover {
+        background: none;
+        color: #E7A373;
+    }
+
+    dd {
+        margin: 2em 0 0 0;
+    }
+
+    .cover {
+        min-width: 50em;
+    }
+
+    img.pagerip {
+        padding: 0;
+        margin-top: 3em;
+        width: 103%;
+
+    }
+
+
+    img.right {
+        display: block;
+        float: none;
+        clear: both;
+        margin: auto;
+    }
+
+    img.left {
+        display: block;
+        float: none;
+        clear: both;
+        margin: auto;
+    }
+
+    p {
+        clear: both;
+        width: 80%;
+        margin: auto;
+    }
+
+    .footerlogo {
+        width: 40%;
+        margin: auto;
+    }
+
+    footer div {
+        width: 20%;
+        margin: 0 0 0 1em;
+        height: auto;
+    }
+
+    footer .socialicons {
+        clear: both;
+        float: none;
+        width: 5.5em;
+        margin: auto;
+        padding-top: 1em;
+    }
+
+    footer p {
+        width: 90%;
+        padding-top: 1em;
+    }
+
+    .letterpress img {
+        float: none;
+        clear: both;
+        width: 10em;
+
+    }
+
+    /* -- NEEDS TO BE ADDED TO BASE CODE ---*/
+    .socialicons {
+        margin-top: 0em;
+    }
+}
+
+/* --------- Custom About Page Code (not part of base code) --------- */
+
+/* ---- EST 1969 section ----- */
+.est1969 {
+    margin: -10em 0 -2em 10em;
+}
+
+.est1969 h1 {
+    font-size: 5em;
+    color: #E7A373;
+}
+
+.est1969 p {
+    margin-top: -3em;
+    line-height: 150%;
+}
+
+.est1969 img {
+    margin: -15em 6em 0 0;
+    width: 35%;
+
+}
+
+
+/* ---- LETTERPRESS Section ----- */
+.letterpress {
+    margin: -5em 0 0 0;
+}
+
+.letterpress h1 {
+    margin: 0 0 0 5.5em;
+    font-size: 5em;
+}
+
+.letterpress p {
+    margin: 0 0 0 38em;
+    width: 40%;
+}
+
+.letterpress img {
+    float: left;
+    min-width: 25em;
+    margin: -5em 1em 2em 13em;
+    opacity: 0.5;
+    width: 30%;
+    position: relative;
+    z-index: -1;
+}
+
+.letterpress h2 {
+    font-size: 1em;
+    color: #CDABA9;
+    position: relative;
+    margin: -1em 0 0 50em;
+}
+
+/* ---- Coursework Section ----- */
+.coursework {
+    Margin: -10em 0 0 0;
+}
+
+.coursework h1 {
+    margin: 0 0 0 1.5em;
+    font-size: 5em;
+    color: #845018;
+}
+
+.coursework p {
+    margin: -1em 0 0 11em;
+    width: 30%;
+}
+
+.coursework img {
+    min-width: 25em;
+    margin: -4em 1em 2em 30em;
+    opacity: 0.4;
+    width: 50%;
+    position: absolute;
+    z-index: -1;
+}
+
+.affiliates h2 {
+    font-size: 1em;
+    color: #CDABA9;
+    margin-left: -1em;
+}
+
+.coursework ul {
+    position: relative;
+    list-style-type: none;
+
+}
+
+.affiliates {
+    float: left;
+    margin: -12em 0 0 42em;
+}
+
+/* ---- Curators Section ----- */
+
+.staff{
+    display:flex;
+    flex-direction:column;
+    margin-left:-2em;
+    margin-top:4em;
+}
+
+.curator{
+    width:100%;
+    display:flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    float:none;
+    clear:both;
+    margin:1em;
+    margin-left:-.5em;
+}
+
+.curator img{
+    width:20em;
+    margin:2em 5em;
+    align-self: center;
+    opacity:.7;
+}
+
+.curator h1,.curator h2,.curator p{
+    padding:0;
+    width:10em;
+    margin:0;
+}
+
+.curator h1{
+    margin-bottom:.3em;
+}
+
+.curator h2{
+    color:#CDABA9;
+}
+
+.curator p{
+    width:28em;
+}
+
+img.staff{
+    border-right:2px solid black;
+    padding-right:3em;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    /* ---- LETTERPRESS Section For Smaller Screens ----- */
+    .letterpress {
+        margin-top: -5em;
+
+    }
+
+    .letterpress img {
+        position: relative;
+        width: 100%;
+        padding: 1em;
+        Margin: auto;
+
+    }
+
+    .letterpress p {
+        display: block;
+        clear: both;
+        float: none;
+        margin: auto;
+        width: 90vw;
+    }
+
+    .letterpress h1 {
+        display: flex;
+        font-size: 4em;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .letterpress h2 {
+        display: flex;
+        margin: auto;
+        justify-content: center;
+    }
+
+    /* ---- Est1969 Section For Smaller Screens ----- */
+    .est1969 {
+        margin: auto;
+    }
+
+    .est1969 h1 {
+        font-size: 5em;
+        color: #E7A373;
+        margin-top: -2em;
+    }
+
+    .est1969 p {
+        margin-top: -3em;
+        line-height: 150%;
+    }
+
+    .est1969 img {
+        width: 100%;
+        Display: block;
+        float: none;
+        clear: both;
+        margin: auto;
+
+    }
+
+    .coursework {
+        margin: 0 0 0 0;
+        padding: none;
+    }
+
+    .coursework img {
+        margin: 7em 0 0 5em;
+        width: 30%;
+    }
+
+    .coursework h1 {
+        font-size: 4em;
+        margin: 0 0 0 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .coursework p {
+        display: block;
+        clear: both;
+        float: none;
+        margin: auto;
+        width: 90vw;
+    }
+
+    .affiliates {
+        margin: -3.5em 0 0 0;
+        float: none;
+        clear: both;
+
+    }
+    
+    .curator{
+        flex-direction:column;
+    }
+    
+    .curator p{
+        padding-bottom:1em;
+    }
+    .curator img{
+        border:none;
+        padding:0;
+    }
+}

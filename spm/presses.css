@@ -1,0 +1,729 @@
+/* 
+        SPM WEBSITE
+
+            GRC 339 - SPRING 2019
+
+        >RACHEL LACKMANN
+        >STEVEN NGUYEN
+        >SARAH KOEP
+                                    */
+
+/* CSS BASE CODE < CHANGE THIS TO TITLE OF PAGE */
+
+/* ------------------------------------ */
+
+/* STYLES LOGO */
+.logo {
+    width: 25em;
+    padding: 2em;
+    float: left;
+    transition: .5s ease-in-out;
+}
+
+/* FADES LOGO ON HOVER */
+.logo:hover {
+    opacity: .8;
+    -webkit-transition: 1s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+/* BODY - APPLYS ALL */
+body {
+    font-family: chivo, sans-serif;
+}
+
+
+/* HEADER CAPTION */
+dd {
+    margin: 4.8em 0 .5em 0em;
+    min-width: 4.4em;
+    font-family: yeseva one, serif;
+    font-size: 4em;
+    color: #FDF8F2;
+    font-weight: 100;
+    padding: 0 .5em;
+    line-height: 95%;
+}
+
+/* FIRST HEADING LEVEL */
+h1 {
+    font-family: yeseva one, serif;
+    font-size: 4em;
+    color: #495A4A;
+    font-weight: 100;
+    padding: .5em 1em 0em 1em;
+    position: relative;
+    z-index: 1;
+}
+
+/* SUBHEADING LEVEL */
+h2 {
+    color: #495A4A;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: .5em 1em 0em 1em;
+}
+
+/* FROM HOME PAGEIGNORE */
+h5 {
+    font-size: 1em;
+}
+
+/* BODY TEXT PARAGRAPH */
+p {
+    padding: 0em 1em 1em 2em;
+    font-size: 1em;
+    width: 30em;
+}
+
+/* COVER IMAGE */
+.cover {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    z-index: -2;
+    filter: grayscale(100%);
+
+    /* STYLES THE COVER IMAGE */
+    filter: contrast(70%) brightness(50%) sepia(100%) hue-rotate(340deg) saturate(120%);
+}
+
+/* MAKES FONT WEIGHT LIGHTER - SPAN ELEMENT */
+.light {
+    font-weight: 100;
+}
+
+/* MAKES FONT ORANGE - SPAN ELEMENT */
+.orange {
+    color: #E7A373;
+}
+
+/* STYLES NAV ELEMENTS */
+
+/* NAV CONTAINER */
+header {
+    margin: 0;
+    width: 100%;
+    padding: none;
+    height: 5.1em;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* NAV LINKS */
+a {
+    text-decoration: none;
+}
+
+nav a {
+    color: #FDF8F2;
+    padding: 2em 1.2em .7em 1.3em;
+    font-weight: 700;
+    font-size: 1.1em;
+    letter-spacing: .03em;
+    transition: .5s ease-in-out;
+    -webkit-transition: 1s ease-in-out;
+        transition:.5s ease-in-out;
+}
+
+/* NAV HOVER HIGHLIGHT ON HOVER */
+nav a:hover {
+    background: #CDABA9;
+    color: #FDF8F2;
+    transition: .5s;
+}
+
+/* NAV LINKS - FLEX BOX */
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+nav ul li {
+    list-style-type: none;
+    flex-direction: row;
+}
+
+.currentpage {
+    color: #E7A373;
+}
+
+/* PAGE RIP ELEMENT - SIZE AND ALIGNMENT */
+img.pagerip {
+    width: 103%;
+    z-index: 100;
+    position: absolute;
+    margin-top: -1%;
+    margin-left: -1em;
+    overflow: hidden;
+}
+
+/* SOCIAL ICONS */
+.socialicons {
+    z-index: 100;
+    float: right;
+    margin-top: -3em;
+}
+
+.socialicons img {
+    width: 2em;
+    margin: .3em;
+    transition: .5s;
+}
+
+.socialicons img:hover {
+    filter: brightness(65%) sepia(100%)hue-rotate(-20deg) saturate(140%);
+    transition: .5s;
+}
+
+/* END OF SOCIAL ICONS */
+
+/* MAIN PAGE CONTENT DIV */
+.pagecontent {
+    padding-top: 1.5em;
+    position: relative;
+    width: 103%;
+    margin-top: 4em;
+    background-color: #FDF8F2;
+    z-index: 0;
+    margin-left: -1em;
+    padding-bottom: 1em;
+    overflow:hidden;
+}
+
+
+
+
+
+/*IMAGE FLOAT LEFT*/
+img.left {
+    float: left;
+    width: 20em;
+    margin: 0 0 0 2em;
+    opacity: .7;
+}
+
+/*IMAGE FLOAT RIGHT*/
+img.right {
+    float: right;
+    width: 20em;
+    margin: 0 2em 0 0;
+    opacity: .7;
+}
+
+
+/* ------------- FOOTER ---------------- */
+
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #495A4A;
+    padding: 1.5em 1em 1em 1em;
+    overflow:hidden;
+}
+
+/* NAV LINKS */
+.footerlogo {
+    margin-right: 3em;
+    width: 15em;
+    float: left;
+}
+
+/* FOOTER LINK */
+footer a {
+    text-decoration: none;
+    color: #FDF8F2;
+}
+
+footer a:hover {
+    background: none;
+    color: #E7A373;
+    transition: 1s;
+}
+
+/* FOOTER NAV LINKS */
+footer ul li {
+    margin-left: -1em;
+    padding-bottom: 1em;
+    list-style-type: none;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* APPLIES LEFT BORDER */
+footer div {
+    margin-left: 5%;
+    padding: none;
+    width: 20%;
+    border-left: 3px solid white;
+    float: left;
+    height: 6em;
+}
+
+/* FOOTER SOCIAL ICONS */
+footer .socialicons {
+    margin-top: 0;
+    width: 13%;
+    float: right;
+    height: 3em;
+    border: none;
+}
+
+/* Footer Copyright Text */
+footer p {
+    display: block;
+    font-size: .75em;
+    font-weight: 100;
+    color: #FDF8F2;
+    padding: 12em 0 1em 0;
+    text-align: left;
+    width: 80em;
+}
+
+.meetthepresses h1 {
+    padding: 0;
+    margin: 1em auto .3em auto;
+    width: 100%;
+    text-align: center;
+}
+
+.meetthepresses p {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    line-height: 1.5;
+    font-size:1.3em;
+    font-weight:200;
+    font-style: italic;
+}
+
+
+/*POP UP THUMBNAIL LINKS*/
+#wrapper {
+    width: 100%;
+}
+
+#wrapper p{
+
+}
+
+#wrapper ul {
+    /*the whole group of links*/
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin:auto;
+    padding-left: 0;
+    justify-content:center;
+}
+
+#wrapper li {
+    /*individual links*/
+    width:22em;
+    list-style-type: none;
+    text-align: center;
+    transition: .5s;
+    margin:2em 1em;
+    display:flex;
+    -webkit-transition: 1s ease-in-out;
+        transition:.5s ease-in-out;
+}
+
+#wrapper a {
+    /*text*/
+    font-weight: 600;
+    font-family: yeseva one, serif;
+    letter-spacing: .03em;
+    font-size: .8em;
+    color: #495A4A;
+    transition: .5s;
+     -webkit-transition: 1s ease-in-out;
+        transition:.5s ease-in-out;
+}
+
+#wrapper li img:hover {
+    /*hover effects on links, effects images and text*/
+    transition: .5s;
+    opacity: 1;
+    filter: brightness(75%) sepia(100%)hue-rotate(-40deg) saturate(50%);
+}
+
+#wrapper li img {
+    width:15em;
+    display: block;
+    opacity: .5;
+    border: .3em solid #000;
+    margin:auto;
+     -webkit-transition: 1s ease-in-out;
+        transition:.5s ease-in-out;
+}
+
+#wrapper li p{
+    margin:0;
+    padding:0;
+    font-size:1.3em;
+}
+
+/*POP UP STYLES*/
+
+.popup-position {
+    /*fixes the popup to the screen and sets a background*/
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(79, 79, 79, .54);
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    transition: .5s;
+}
+
+#popup-wrapper {
+    /*placement of the popup on the screen*/
+    width: 70%;
+    margin: 1em auto;
+    text-align: left;
+    transition: .5s;
+}
+
+#popup-container {
+    /*styles the popup!*/
+    background-color: #FDF8F2;
+    padding: 1em;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s;
+}
+
+#popup-container img {
+    position: absolute;
+    width: 20em;
+    z-index: 0;
+    opacity: .4;
+    transition: 1s;
+}
+
+#popup-container p,h3,h4 {
+    position: relative;
+    z-index: 100;
+    transition: .5s;
+}
+
+#popup-container h3 {
+    font-family: yeseva one, serif;
+    font-size: 2em;
+    margin: 1em 0 0 30%;
+    color: #495A4A;
+}
+
+#popup-container h4 {
+    color: #E7A373;
+    font-family: yeseva one, serif;
+    font-weight: 100;
+    font-size: 4em;
+    margin: -.5em 0 0 75%;
+    opacity: .6;
+}
+
+#popup-container p {
+    width: 45%;
+    margin: 1em 0 0 38%;
+    line-height: 1.4;
+    font-weight: 300;
+    font-weight:400;
+}
+
+#popup-container a {
+    color: #845018;
+    z-index:100;
+}
+
+/*END POP UP STYLES*/
+
+/*CAMPBELL PRESS DIV*/
+
+.campbell {
+    width: 75%;
+    margin: auto;
+    transition: .5s;
+}
+
+.campbell a img {
+    width: 20em;
+    margin: auto;
+    float: left;
+    transition: .5s;
+    padding-right: 3em;
+}
+
+.campbell h2 {
+    width: 90%;
+    font-size: 2em;
+    transition: .5s;
+    text-align: left;
+    letter-spacing:.05em;
+}
+
+.campbell p {
+    width: 90%;
+    padding: 0;
+    transition: .5s;
+}
+
+.campbell h4 {
+    margin: 0 2em 2em 2em;
+    font-size: 1.5em;
+    transition: .5s;
+}
+
+.campbell h4 a:hover {
+    opacity:.3;
+    transition: .5s;
+}
+
+.campbell:hover {
+    transition: .5s;
+    filter: brightness(75%) sepia(100%)hue-rotate(-40deg) saturate(50%);
+}
+
+
+/*END POP-UP CODE*/
+
+
+/*QUOTE AT THE BOTTOM*/
+
+div.cpquote {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.cpquote p {
+    width: 100%;
+    font-style:italic;
+    font-size:1.2em;
+}
+
+/*quotation marks*/
+.cpquote h3 {
+    color: #E7A373;
+    font-family: yeseva one, serif;
+    font-weight: 100;
+    font-size: 12em;
+    margin: 0;
+    opacity: .6;
+    position: ;
+    z-index: -1;
+}
+
+/*left quotation*/
+h3.l {
+    margin: 0 0 -.9em -.14em;
+}
+
+/*right quotation*/
+h3.r {
+    margin: -1.18em 0 0em 96%;
+}
+
+/*sources*/
+
+.sources{
+    margin:0 3em;
+    width:50%;
+}
+.sources h2{
+
+}
+.sources li{
+    font-size:.6em;
+}
+
+/*************************MEDIA QUERIES***************************/
+@media only screen and (max-width: 1000px) {
+
+    /*makes the image lighter*/
+    #popup-container img {
+        opacity: .2;
+    }
+
+    /*centers larger paragraph*/
+    #popup-container p {
+        margin: 1em;
+        width: 80%;
+    }
+
+    .campbell {
+        float: none;
+        clear: both;
+        width: 100%;
+    }
+
+    .campbell a img {
+        float: none;
+        clear: both;
+        text-align: center;
+        display: block;
+        margin: auto;
+        width: 30em;
+    }
+
+    .campbell h2 {
+        width: 20em;
+        display: block;
+        float: none;
+        clear: both;
+        text-align: left;
+        margin:.5em auto;
+    }
+
+    .campbell p {
+        width: 40em;
+        margin: .5em auto;
+    }
+    
+    .campbell h4{
+        text-align: center;
+        width:100%;
+        margin:.5em auto 3em;
+    }
+    .cpquote{
+        margin-left: 1em;
+    }
+}
+
+/*smallest screen & mobile*/
+@media only screen and (max-width: 900px) {
+    header {
+        height: 10em;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .logo {
+        float: none;
+        display: block;
+        margin: auto;
+        margin-bottom: -4em;
+        padding: 2em 0 0 0;
+    }
+
+    nav ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 0em auto;
+        align-content: center;
+    }
+
+    nav a:hover {
+        background: none;
+        color: #E7A373;
+    }
+
+    dd {
+        margin: 2em 0 0 0;
+    }
+
+    .cover {
+        min-width: 50em;
+    }
+
+    img.pagerip {
+        padding: 0;
+        margin-top: 3em;
+        width: 103%;
+    }
+
+    img.right {
+        display: block;
+        float: none;
+        clear: both;
+        margin: auto;
+    }
+
+    img.left {
+        display: block;
+        float: none;
+        clear: both;
+        margin: auto;
+    }
+
+    p {
+        clear: both;
+        width: 80%;
+        margin: auto;
+    }
+
+    .footerlogo {
+        width: 40%;
+        margin: auto;
+    }
+
+    footer div {
+        width: 20%;
+        margin: 0 0 0 1em;
+        height: auto;
+    }
+
+    footer .socialicons {
+        clear: both;
+        float: none;
+        width: 5.5em;
+        margin: auto;
+        padding-top: 1em;
+    }
+
+    footer p {
+        width: 90%;
+        padding-top: 1em;
+    }
+
+    #wrapper ul {
+        justify-content: center;
+        /*centers the icons*/
+    }
+
+    #popup-container h3 {
+        /*makes the pop-up window wider*/
+        width: 90%;
+        margin: auto;
+    }
+
+    #popup-container p {
+        width: 90%;
+        margin: auto;
+        padding: 0;
+    }
+
+    #popup-container h4 {
+        margin: auto;
+    }
+    
+    .campbell h2{
+        width:80%;
+    }
+    
+    .campbell p{
+        width:80%;
+    }
+
+    .cpquote {
+        /*centers quote at the bottom*/
+        margin: auto;
+    }
+}
