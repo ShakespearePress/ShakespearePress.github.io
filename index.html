@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--Links to CSS-->
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Links to Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Chivo:300,400,400i,700,900|Yeseva+One&display=swap" rel="stylesheet">
+
+
+    <title>Shakespeare Press Museum | Home</title>
+
+</head>
+
+<body>
+
+    <!--HEADER: COPY & PASTE TO EVERY PAGE-->
+    <header>
+        <a href="index.html"><img class="logo" src="images/logo.png"></a>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="presses.html">Presses</a></li>
+                <li><a href="visit.html">Visit</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--END HEADER-->
+
+    <!--VIDEO: HOME PAGE ONLY-->
+    <div id="covervideo">
+        <video loop muted autoplay poster="images/indeximage.jpg" id="covervideo2">
+            <source src="spmvideosmall.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <img class="cover" src="images/indeximage.jpg">
+
+    <div class="container">
+        <!--SOCIAL ICONS-->
+
+        <div class="socialicons">
+            <a href="https://www.facebook.com/ShakespearePressMuseum/"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/shakespearepress/"><img src="images/instagram.png" alt="Instagram"></a>
+        </div>
+
+        <!-- PAUSE/PLAY -->
+        <button id="play" onclick="myFunction()"><img src="images/pause.png"></button>
+
+        <!--BOTTOM BAR-->
+
+        <img class="bottombar" src="images/footer.png">
+
+        <div class="bottombar">
+            <dd class="home">Print Like<br>It's <span class="orange">1897.</span></dd>
+
+            <!--INFORMATION BLOCKS: HOME PAGE ONLY-->
+            <div class="blocks">
+                <div class="infoblockgreen">
+                    <h2>Open <br> Hours</h2>
+                    <h5>Tuesdays
+                        <span class="light"><br>9 - 11AM</span></h5>
+                    <br><br>    
+                    <h5>Fridays
+                        <span class="light"><br>11 - 2PM</span></h5>    
+                </div>
+                <div class="infoblockorange">
+                    <h2>Visit Us!</h2>
+                    <h5><span class="light">Cal Poly, Building 26 Room 116 <br>
+                            San Luis Obispo, California 93407</span></h5>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+        // Get the video
+        var video = document.querySelector("#covervideo2");
+
+        // Get the button
+        var btn = document.querySelector("#play");
+
+        // Pause and play the video, and change the button text
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+    </script>
+
+</body></html>
