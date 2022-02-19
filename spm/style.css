@@ -30,7 +30,8 @@ dd{
 h1{
     font-family: yeseva one, serif;
     font-size:3em;
-    color:#FDF8F2;
+    /*color:#FDF8F2;*/
+    color: white;
     font-weight:100;
 }
 
@@ -190,6 +191,7 @@ dd.home{
 .blocks{ 
     display:flex;
     flex:1 1 0;
+
 }
 
 /* VISIT US INFO BLOCK */
@@ -354,12 +356,14 @@ dd.home{
         font-size:1em;
         margin:0 1em;
     }
-    
+
     .infoblockgreen h2{
-        margin-right:0;
+        margin-right:0em;
+    
     }
     .infoblockgreen h5{
         margin:0;
+
     }
     
     .infoblockorange h2{
