@@ -163,7 +163,7 @@ img.pagerip {
     min-width: 50em;
     width: 103%;
     z-index: 100;
-    position: absolute;
+    position: relative;/*absolute*/;
     margin-left: -1em;
 }
 
