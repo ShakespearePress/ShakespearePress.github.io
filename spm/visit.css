@@ -738,7 +738,7 @@ img.typeSet {
     .apply {}
 
     .upcomingevents h1 {
-        top-margin: 3em;
+        margin-top: 3em;
         margin: auto;
         width: 80%;
     }
