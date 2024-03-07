@@ -193,7 +193,7 @@ img.pagerip {
     padding-top: 1.5em;
     position: relative;
     width: 103vw;
-    margin-top: 0em;
+    margin-top: -1em;
     background-color: #FDF8F2;
     z-index: 0;
     margin-left: -1em;
