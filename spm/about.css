@@ -1,660 +1,799 @@
-/* 
-        SPM WEBSITE
-
-            GRC 339 - SPRING 2019
-
-        >RACHEL LACKMANN
-        >STEVEN NGUYEN
-        >SARAH KOEP
-                                    */
-
 /* CSS BASE CODE < CHANGE THIS TO TITLE OF PAGE */
 
 /* ------------------------------------ */
 
 /* STYLES LOGO */
 .logo {
-    width: 25em;
-    padding: 2em;
-    float: left;
-    transition: .5s ease-in-out;
+  width: 25em;
+  padding: 2em;
+  float: left;
+  transition: 0.5s ease-in-out;
 }
 
 /* FADES LOGO ON HOVER */
 .logo:hover {
-    opacity: .8;
-    -webkit-transition: 1s ease-in-out;
-    transition: .5s ease-in-out;
+  opacity: 0.8;
+  transition: 0.5s ease-in-out;
 }
 
 /* BODY - APPLYS ALL */
 body {
-    font-family: chivo, sans-serif;
-    /*** CHANGE IN BASE CODE ****/
-    font-weight: 400;
+  font-family: "Chivo", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
+html {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+* {
+  box-sizing: border-box; /* Ensure padding and borders are included in the total width and height */
+}
 
 /* HEADER CAPTION */
-dd {
-    margin: 4.8em 0 .5em 0em;
-    min-width: 4.4em;
-    font-family: yeseva one, serif;
-    font-size: 4em;
-    color: #FDF8F2;
-    font-weight: 100;
-    padding: 0 .5em;
-    line-height: 95%;
+.celebrating-50-years p {
+  margin: 4.8em 0 0.5em 0;
+  font-family: "Yeseva One", serif;
+  color: #fdf8f2;
+  font-weight: 100;
+  padding: 0 0.5em;
+  line-height: 95%;
 }
 
 /* FIRST HEADING LEVEL */
 h1 {
-    font-family: yeseva one, serif;
-    font-size: 3em;
-    color: #495A4A;
-    font-weight: 100;
-    padding: .5em 1em 0em 1em;
-    position: relative;
-    z-index: 1;
+  font-family: "Yeseva One", serif;
+  font-size: 3em;
+  color: #495a4a;
+  font-weight: 100;
+  padding: 0.5em 1em 0 1em;
+  position: relative;
+  z-index: 1;
 }
 
 /* SUBHEADING LEVEL */
 h2 {
-    color: #495A4A;
-    text-transform: uppercase;
-    font-size: 1.5em;
-    padding: .5em 1em 0em 1em;
-}
-
-/* FROM HOME PAGEIGNORE */
-h5 {
-    font-size: 1em;
+  color: #495a4a;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  padding: 0.5em 1em 0 1em;
 }
 
 /* BODY TEXT PARAGRAPH */
 p {
-    padding: 0em 1em 1em 2em;
-    font-size: 1em;
-    width: 30em;
+  padding: 0.5em 0em;
+  font-size: 1em;
+  width: 30em;
 }
 
 /* COVER IMAGE */
 .cover {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    width: 100%;
-    z-index: -2;
-    filter: grayscale(100%);
-
-    /* STYLES THE COVER IMAGE */
-    filter: contrast(70%) brightness(50%) sepia(100%) hue-rotate(340deg) saturate(120%);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  z-index: -2;
+  filter: grayscale(100%) contrast(70%) brightness(50%) sepia(100%)
+    hue-rotate(340deg) saturate(120%);
+  object-fit: cover; /* Ensures the image covers the entire element */
 }
 
 /* MAKES FONT WEIGHT LIGHTER - SPAN ELEMENT */
 .light {
-    font-weight: 100;
+  font-weight: 100;
 }
 
 /* MAKES FONT ORANGE - SPAN ELEMENT */
 .orange {
-    color: #E7A373;
+  color: #e7a373;
 }
 
 /* STYLES NAV ELEMENTS */
-
-/* NAV CONTAINER */
 header {
-    margin: 0;
-    width: 100%;
-    padding: none;
-    height: 5.1em;
-    position: relative;
-    top: 0;
-    left: 0;
-    z-index: 1;
+  margin: 0;
+  width: 100%;
+  height: 5.1em;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 /* NAV LINKS */
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 nav a {
-    color: #FDF8F2;
-    padding: 2em 1.2em .7em 1.3em;
-    font-weight: 700;
-    font-size: 1.1em;
-    letter-spacing: .03em;
-
-    /***** NEEDS TO BE ADDED TO BASE CODE *******/
-    -webkit-transition: 1s ease-in-out;
-    transition: .5s ease-in-out;
+  color: #fdf8f2;
+  padding: 2em 1.2em 0.7em 1.3em;
+  font-weight: 700;
+  font-size: 1.1em;
+  letter-spacing: 0.03em;
+  transition: 0.5s ease-in-out;
 }
 
-/* NAV HOVER HIGHLIGHT ON HOVER */
 nav a:hover {
-    background: #CDABA9;
-    color: #FDF8F2;
-    -webkit-transition: 1s ease-in-out;
-    transition: .5s ease-in-out;
+  background: #cdaba9;
+  color: #fdf8f2;
+  transition: 0.5s ease-in-out;
 }
 
 /* NAV LINKS - FLEX BOX */
 nav ul {
-    display: flex;
-    justify-content: flex-end;
-    text-transform: uppercase;
-    padding: 1em;
+  display: flex;
+  justify-content: flex-end;
+  text-transform: uppercase;
+  padding: 1em;
 }
 
 a.currentpage {
-    color: #E7A373;
+  color: #e7a373;
 }
 
 nav ul li {
-    list-style-type: none;
-    flex-direction: row;
+  list-style-type: none;
+  flex-direction: row;
 }
 
 /* PAGE RIP ELEMENT - SIZE AND ALIGNMENT */
 img.pagerip {
-    width: 103%;
-    z-index: 100;
-    position: absolute;
-    margin-top: -1%;
-    margin-left: -1em;
+  width: 100%; /* Ensure it doesn't exceed 100% width */
+  z-index: 100;
+  position: absolute;
+  margin-top: -1%;
+  margin-left: 0;
 }
 
 /* SOCIAL ICONS */
 .socialicons {
-    z-index: 100;
-    position:relative;
-    float: right;
-    margin-top: -3em;
+  z-index: 100;
+  position: relative;
+  float: right;
+  margin-top: -3em;
 }
 
 .socialicons img {
-    width: 2em;
-    margin: .3em;
-    transition: .5s;
+  width: 2em;
+  margin: 0.3em;
+  transition: 0.5s;
 }
 
 .socialicons img:hover {
-    filter: brightness(65%) sepia(100%)hue-rotate(-20deg) saturate(140%);
-    transition: .5s;
+  filter: brightness(65%) sepia(100%) hue-rotate(-20deg) saturate(140%);
+  transition: 0.5s;
 }
-
-/* END OF SOCIAL ICONS */
 
 /* MAIN PAGE CONTENT DIV */
 .pagecontent {
-    padding-top: 1.5em;
-    position: relative;
-    width: 103vw;
-    margin-top: 4em;
-    background-color: #FDF8F2;
-    z-index: 0;
-    margin-left: -1em;
-    padding-bottom: 20em;
+  padding-top: 1.5em;
+  position: relative;
+  width: 100vw;
+  margin-top: 4em;
+  background-color: #fdf8f2;
+  z-index: 0;
+  margin-left: 0;
+  padding-bottom: 20em;
 }
-
 
 /*IMAGE FLOAT LEFT*/
 img.left {
-    float: left;
-    width: 20em;
-    margin: 0 0 0 2em;
-    opacity: .7;
+  float: left;
+  width: 100%; /* Ensure it scales */
+  margin: 0 0 0 2em;
+  opacity: 0.7;
 }
 
 /*IMAGE FLOAT RIGHT*/
 img.right {
-    float: right;
-    width: 20em;
-    margin: -20em 10em 0 0;
-    opacity: .7;
+  float: right;
+  width: 100%; /* Ensure it scales */
+  margin: -20em 10em 0 0;
+  opacity: 0.7;
 }
 
-
-/* ------------- FOOTER ---------------- */
-
+/* FOOTER */
 footer {
-    position: absolute;
-    margin-top: -11em;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background-color: #495A4A;
-
-    padding: 1.5em 1em 1em 1em;
+  position: absolute;
+  margin: 0;
+  margin-top: -15em;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #495a4a;
+  padding: 1.5em 0.35em 1em 1em;
 }
 
-/* NAV LINKS */
+/* FOOTER LOGO */
 .footerlogo {
-    margin-right: 3em;
-    width: 15em;
-    float: left;
+  margin-right: 3em;
+  width: 15em;
+  float: left;
 }
 
-/* FOOTER LINK */
 footer a {
-    text-decoration: none;
-    color: #FDF8F2;
+  text-decoration: none;
+  color: #fdf8f2;
 }
 
 footer a:hover {
-    background: none;
-    color: #E7A373;
-    transition: 1s;
+  background: none;
+  color: #e7a373;
+  transition: 1s;
 }
 
-/* FOOTER NAV LINKS */
 footer ul li {
-    margin-left: -1em;
-    padding-bottom: 1em;
-    list-style-type: none;
-    text-transform: uppercase;
-    font-weight: 700;
+  margin-left: -1em;
+  padding-bottom: 1em;
+  list-style-type: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fdf8f2;
 }
 
 /* APPLIES LEFT BORDER */
 footer div {
-    margin-left: 5%;
-    padding: none;
-    width: 20%;
-    border-left: 3px solid white;
-    float: left;
-    height: 6em;
+  margin-left: 5%;
+  width: 20%;
+  border-left: 3px solid white;
+  float: left;
+  height: 6em;
 }
 
 /* FOOTER SOCIAL ICONS */
 footer .socialicons {
-    margin: 0em 3em 0em 0em;
-    width: 6em;
-    height: 3em;
-    border: none;
+  margin: 0 3em 0 0;
+  width: 6em;
+  height: 3em;
+  border: none;
 }
 
-/* Footer Copyright Text */
 footer p {
-    display: block;
-    font-size: .75em;
-    font-weight: 100;
-    color: #FDF8F2;
-    padding: 12em 0 1em 0;
-    text-align: left;
-    width: 80em;
-}
-
-/**MEDIA QUERIES**/
-@media only screen and (max-width: 900px) {
-    header {
-        height: 10em;
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .logo {
-        float: none;
-        display: block;
-        margin: auto;
-        margin-bottom: -4em;
-        padding: 2em 0 0 0;
-    }
-
-    nav ul {
-        padding: 0;
-        margin: 0;
-    }
-
-    nav ul li {
-        text-align: center;
-        margin: 0em auto;
-        align-content: center;
-    }
-
-    /* ****** NEEDS TO BE ADDED TO BASE CODE ****** */
-    nav a {
-        -webkit-transition: 1s ease-in-out;
-        transition: .5s ease-in-out;
-    }
-
-    nav a:hover {
-        background: none;
-        color: #E7A373;
-    }
-
-    dd {
-        margin: 2em 0 0 0;
-    }
-
-    .cover {
-        min-width: 50em;
-    }
-
-    img.pagerip {
-        padding: 0;
-        margin-top: 3em;
-        width: 103%;
-
-    }
-
-
-    img.right {
-        display: block;
-        float: none;
-        clear: both;
-        margin: auto;
-    }
-
-    img.left {
-        display: block;
-        float: none;
-        clear: both;
-        margin: auto;
-    }
-
-    p {
-        clear: both;
-        width: 80%;
-        margin: auto;
-    }
-
-    .footerlogo {
-        width: 40%;
-        margin: auto;
-    }
-
-    footer div {
-        width: 20%;
-        margin: 0 0 0 1em;
-        height: auto;
-    }
-
-    footer .socialicons {
-        clear: both;
-        float: none;
-        width: 5.5em;
-        margin: auto;
-        padding-top: 1em;
-    }
-
-    footer p {
-        width: 90%;
-        padding-top: 1em;
-    }
-
-    .letterpress img {
-        float: none;
-        clear: both;
-        width: 10em;
-
-    }
-
-    /* -- NEEDS TO BE ADDED TO BASE CODE ---*/
-    .socialicons {
-        margin-top: 0em;
-    }
+  display: block;
+  font-size: 0.75em;
+  font-weight: 100;
+  color: #fdf8f2;
+  padding: 12em 0 1em 0;
+  text-align: left;
+  width: 80em;
 }
 
 /* --------- Custom About Page Code (not part of base code) --------- */
 
 /* ---- EST 1969 section ----- */
 .est1969 {
-    margin: -10em 0 -2em 10em;
+  margin: -10em 0 -2em 10em;
 }
 
 .est1969 h1 {
-    font-size: 5em;
-    color: #E7A373;
+  font-size: 5em;
+  color: #e7a373;
 }
 
 .est1969 p {
-    margin-top: -3em;
-    line-height: 150%;
+  margin-top: -3em;
+  line-height: 150%;
 }
 
 .est1969 img {
-    margin: -15em 6em 0 0;
-    width: 35%;
-
+  margin: -15em 6em 0 0;
+  width: 35%;
 }
 
+/* Footer Nav Links */
+.right-nav {
+  margin-left: 2em;
+}
 
 /* ---- LETTERPRESS Section ----- */
 .letterpress {
-    margin: -5em 0 0 0;
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  width: 95%;
 }
 
 .letterpress h1 {
-    margin: 0 0 0 5.5em;
-    font-size: 5em;
-}
-
-.letterpress p {
-    margin: 0 0 0 38em;
-    width: 40%;
+  margin: 0 1em 0 0;
+  padding: 0;
+  font-size: 5em;
+  text-align: right;
 }
 
 .letterpress img {
-    float: left;
-    min-width: 25em;
-    margin: -5em 1em 2em 13em;
-    opacity: 0.5;
-    width: 30%;
-    position: relative;
-    z-index: -1;
+  opacity: 0.5;
+  width: 30%;
+  height: 30%;
+  z-index: -1;
+  margin-left: 4em;
 }
 
 .letterpress h2 {
-    font-size: 1em;
-    color: #CDABA9;
-    position: relative;
-    margin: -1em 0 0 50em;
+  font-size: 1em;
+  color: #cdaba9;
+  text-align: right;
+  margin: 0 5em 0 0;
+  padding: 0;
+}
+
+.letterpressHeaderContainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  justify-content: right;
 }
 
 /* ---- Coursework Section ----- */
 .coursework {
-    Margin: -10em 0 0 0;
+  margin: -10em 0 0 0;
 }
 
 .coursework h1 {
-    margin: 0 0 0 1.5em;
-    font-size: 5em;
-    color: #845018;
+  margin: 0 0 0 1.5em;
+  font-size: 5em;
+  color: #845018;
 }
 
 .coursework p {
-    margin: -1em 0 0 11em;
-    width: 30%;
+  margin: -1em 0 0 11em;
+  width: 30%;
 }
 
 .coursework img {
-    min-width: 25em;
-    margin: -4em 1em 2em 30em;
-    opacity: 0.4;
-    width: 50%;
-    position: absolute;
-    z-index: -1;
-}
-
-.affiliates h2 {
-    font-size: 1em;
-    color: #CDABA9;
-    margin-left: -1em;
-}
-
-.coursework ul {
-    position: relative;
-    list-style-type: none;
-
-}
-
-.affiliates {
-    float: left;
-    margin: -12em 0 0 42em;
+  margin: -4em 1em 2em 30em;
+  opacity: 0.4;
+  width: 50%;
+  z-index: -1;
 }
 
 /* ---- Curators Section ----- */
-
-.staff{
-    display:flex;
-    flex-direction:column;
-    margin-left:-2em;
-    margin-top:4em;
+.staff {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 4em;
+  align-items: center; /* Center align items */
 }
 
-.curator{
-    width:100%;
-    display:flex;
-    align-items: center;
-    align-content: center;
+.curator {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5em auto; /* Center the curator section */
+  padding: 2em 0;
+}
+
+.curator img {
+  width: 20em;
+  height: 20em;
+  object-fit: cover;
+  object-position: center;
+  margin: 2em 5em;
+  align-self: center;
+  opacity: 0.7;
+}
+
+#sage-curator {
+  background: #fff;
+}
+
+.curator h1,
+.curator h2,
+.curator p {
+  padding: 0;
+  margin: 0;
+  text-align: center; /* Center text inside the curator div */
+}
+
+.curator h1 {
+  margin-bottom: 0.3em;
+}
+
+.curator h2 {
+  color: #cdaba9;
+}
+
+.pastCuratorList {
+  width: 90%;
+}
+
+.curator p {
+  width: 90%;
+  position: relative;
+  margin: auto;
+  top: -0.7em;
+}
+
+/* PRONOUNS STYLING */
+.pronouns {
+  font-size: 1em;
+  font-style: italic;
+  color: #cdaba9;
+  margin-bottom: 1em;
+}
+
+.nameAndPronouns h1 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.25em;
+}
+
+.nameAndPronouns {
+  margin-bottom: 1em;
+}
+
+/* About Page, Side By Side Bio Stylings */
+
+/* Co-Curator Bar Styles */
+.developerBar,
+.coCuratorBar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.webDeveloperGrid,
+.coCuratorGrid {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.webDeveloperGrid li,
+.coCuratorGrid li {
+  width: 100%; /* Ensure full width for each list item */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+}
+
+#aidan img,
+#sierra img,
+#bucky img,
+#liam img {
+  width: 15em;
+  height: 15em;
+}
+
+#aidan,
+#sierra,
+#bucky,
+#liam {
+  margin: 0;
+  padding: 0;
+}
+
+.dev2,
+.cur2 {
+  margin-left: 2em;
+}
+
+#aidan h1,
+#sierra h1,
+#bucky h1,
+#liam h1 {
+  font-size: 2.5em;
+}
+
+.pastCurator {
+  padding-top: 0;
+}
+
+@media only screen and (max-width: 1500px) {
+  #aidan img,
+  #sierra img,
+  #liam img,
+  #bucky img {
+    width: 12em;
+    height: 12em;
+  }
+
+  dd {
+    font-size: 4em;
+  }
+
+  .webDeveloperGrid,
+  .coCuratorGrid {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    float:none;
-    clear:both;
-    margin:1em;
-    margin-left:-.5em;
+    align-items: center;
+    margin: auto;
+    width: 90%;
+  }
+
+  .dev2,
+  .cur2 {
+    margin-left: 0;
+    margin-top: 0.25em;
+  }
 }
 
-.curator img{
-    width:20em;
-    margin:2em 5em;
-    align-self: center;
-    opacity:.7;
-}
-
-.curator h1,.curator h2,.curator p{
-    padding:0;
-    width:10em;
-    margin:0;
-}
-
-.curator h1{
-    margin-bottom:.3em;
-}
-
-.curator h2{
-    color:#CDABA9;
-}
-
-.curator p{
-    width:28em;
-}
-
-img.staff{
-    border-right:2px solid black;
-    padding-right:3em;
-}
-
-
+/**MEDIA QUERIES**/
 @media only screen and (max-width: 900px) {
+  /* ----- General Responsive Styles ----- */
+  header {
+    height: 10em;
+    display: flex;
+    flex-direction: column-reverse;
+  }
 
-    /* ---- LETTERPRESS Section For Smaller Screens ----- */
-    .letterpress {
-        margin-top: -5em;
+  .logo {
+    float: none;
+    display: block;
+    margin: auto;
+    margin-bottom: -4em;
+    padding: 2em 0 0 0;
+  }
 
-    }
+  nav ul {
+    padding: 0;
+    margin: 0;
+  }
 
-    .letterpress img {
-        position: relative;
-        width: 100%;
-        padding: 1em;
-        Margin: auto;
+  nav ul li {
+    text-align: center;
+    margin: 0 auto;
+    align-content: center;
+  }
 
-    }
+  nav a {
+    transition: 0.5s ease-in-out;
+  }
 
-    .letterpress p {
-        display: block;
-        clear: both;
-        float: none;
-        margin: auto;
-        width: 90vw;
-    }
+  nav a:hover {
+    background: none;
+    color: #e7a373;
+  }
 
-    .letterpress h1 {
-        display: flex;
-        font-size: 4em;
-        margin: auto;
-        justify-content: center;
-    }
+  dd {
+    margin: 2em 0 0 0;
+  }
 
-    .letterpress h2 {
-        display: flex;
-        margin: auto;
-        justify-content: center;
-    }
+  .cover {
+    position: absolute; /* Change to absolute to prevent fixed positioning issues */
+    height: 100vh; /* Use viewport height */
+  }
 
-    /* ---- Est1969 Section For Smaller Screens ----- */
-    .est1969 {
-        margin: auto;
-    }
+  img.pagerip {
+    margin-top: 3em;
+    width: 100%; /* Ensure it doesn't exceed 100% width */
+  }
 
-    .est1969 h1 {
-        font-size: 5em;
-        color: #E7A373;
-        margin-top: -2em;
-    }
+  img.right,
+  img.left {
+    display: block;
+    float: none;
+    clear: both;
+    margin: auto;
+    max-width: 100%; /* Ensure it doesn't exceed 100% width */
+  }
 
-    .est1969 p {
-        margin-top: -3em;
-        line-height: 150%;
-    }
+  p {
+    clear: both;
+    width: 80%;
+    margin: auto;
+  }
 
-    .est1969 img {
-        width: 100%;
-        Display: block;
-        float: none;
-        clear: both;
-        margin: auto;
+  .footerlogo {
+    width: 40%;
+    margin: auto;
+  }
 
-    }
+  footer div {
+    width: 20%;
+    margin: 0 0 0 1em;
+    height: auto;
+  }
 
-    .coursework {
-        margin: 0 0 0 0;
-        padding: none;
-    }
+  footer .socialicons {
+    clear: both;
+    float: none;
+    width: 5.5em;
+    margin: auto;
+    padding-top: 1em;
+  }
 
-    .coursework img {
-        margin: 7em 0 0 5em;
-        width: 30%;
-    }
+  footer p {
+    width: 90%;
+    padding-top: 1em;
+  }
 
-    .coursework h1 {
-        font-size: 4em;
-        margin: 0 0 0 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-    }
+  .socialicons {
+    margin-top: 0;
+  }
 
-    .coursework p {
-        display: block;
-        clear: both;
-        float: none;
-        margin: auto;
-        width: 90vw;
-    }
+  .est1969 {
+    margin: auto;
+  }
 
-    .affiliates {
-        margin: -3.5em 0 0 0;
-        float: none;
-        clear: both;
+  .est1969 h1 {
+    font-size: 5em;
+    color: #e7a373;
+    margin-top: -2em;
+  }
 
-    }
-    
-    .curator{
-        flex-direction:column;
-    }
-    
-    .curator p{
-        padding-bottom:1em;
-    }
-    .curator img{
-        border:none;
-        padding:0;
-    }
+  .est1969 p {
+    margin-top: -3em;
+    line-height: 150%;
+  }
+
+  .est1969 img {
+    width: 100%;
+    display: block;
+    float: none;
+    clear: both;
+    margin: auto;
+  }
+
+  .coursework {
+    margin: 0;
+    padding: 0;
+  }
+
+  .coursework h1 {
+    font-size: 4em;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .coursework p {
+    display: block;
+    clear: both;
+    float: none;
+    margin: auto;
+    width: 90vw;
+  }
+
+  .affiliates {
+    margin: -3.5em 0 0 0;
+    float: none;
+    clear: both;
+  }
+
+  .curator {
+    flex-direction: column;
+    align-items: center; /* Ensure items are centered */
+  }
+
+  .curator img {
+    margin: 1em 0;
+  }
+
+  .curator h1,
+  .curator h2,
+  .curator p {
+    text-align: center;
+  }
+
+  footer {
+    width: 99vw;
+  }
+
+  /* ----- Letterpress Section Responsive Styles ----- */
+  .letterpress {
+    margin-top: -5em;
+  }
+
+  .letterpress img {
+    width: 100%;
+    padding: 1em;
+    margin: auto;
+  }
+
+  .letterpressHeaderContainer {
+    padding: 0em;
+  }
+
+  .letterpressHeaderContainer h1,
+  .letterpressHeaderContainer h2 {
+    margin: 0;
+  }
+
+  #letterpressDescription {
+    display: block;
+    clear: both;
+    float: none;
+    margin: auto;
+    width: 90%;
+  }
+
+  .letterpress h1 {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .letterpress h2 {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  img.left {
+    max-width: 100%; /* Ensure it scales properly */
+    height: auto; /* Adjust height automatically */
+  }
+
+  nav a {
+    padding: 0;
+  }
+
+  .logo {
+    width: 15em;
+    margin-bottom: -1em;
+  }
+
+  .celebrating-50-years p {
+    font-size: 2.8em;
+    margin-top: 1em;
+    padding: 0em 0.5em;
+  }
+
+  .celebrating-50-years {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .socialicons {
+    margin-left: 1em;
+  }
+
+  .letterpress h1,
+  .coursework h1 {
+    font-size: 3em;
+  }
+
+  .est1969 h1 {
+    margin-top: -0.5em;
+  }
+
+  .est1969 img {
+    width: 90%;
+  }
+
+  .curator-or-developer-description {
+    width: 100%;
+  }
+
+  .coursework {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4em;
+  }
+
+  .coursework img {
+    width: 90%;
+  }
+
+  .coursework h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .letterpress {
+    display: flex;
+    margin: 3em 0em 2em 0.5em;
+  }
+
+  .letterpress img,
+  .coursework img {
+    margin-bottom: 0.5em;
+  }
 }

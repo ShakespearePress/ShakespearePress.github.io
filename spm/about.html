@@ -1,6 +1,6 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-    <!-- 
+  <!-- 
         SPM WEBSITE
 
         GRC 339 - SPRING 2019
@@ -15,251 +15,376 @@
 
                                     -->
 
-<head>
+  <head>
     <!--Links to CSS-->
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="about.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!--Links to Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Chivo:300,400,400i,700,900|Yeseva+One&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Chivo:300,400,400i,700,900|Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
 
     <!--TITLE OF WEBSITE *CHANGE THIS FOR EACH PAGE-->
     <title>Shakespeare Press Museum | About</title>
     <!-- REMEMBER TO HAVE ALT ELEMENTS FOR EVERY IMAGE -->
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <!--HEADER: COPY & PASTE TO EVERY PAGE-->
 
     <!-- LINKS TO HOME PAGE -->
 
     <!-- ADD class="currentpage" To your current page link -->
     <header>
-        <a href="index.html"><img class="logo" src="images/logo.png"></a>
-        <nav>
-            <ul>
-                <li><a href="about.html" class="currentpage">About</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="presses.html">Presses</a></li>
-                <li><a href="visit.html">Visit</a></li>
-            </ul>
-        </nav>
+      <a href="index.html"><img class="logo" src="images/logo.png" /></a>
+      <nav>
+        <ul>
+          <li><a href="about.html" class="currentpage">About</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="presses.html">Presses</a></li>
+          <li><a href="visit.html">Visit</a></li>
+        </ul>
+      </nav>
     </header>
 
     <!--END HEADER-->
 
     <!-- CAPTION OF THE PAGE HEADER -->
-    <img class="cover" src="images/about.jpg">
-    <dd>Celebrating<br><span class="orange">50+&nbsp;</span>Years.</dd>
+    <img class="cover" src="images/about.jpg" />
+    <div class="celebrating-50-years">
+      <p>Celebrating<br /><span class="orange">50+&nbsp;</span>Years.</p>
 
-    <!-- FACEBOOK AND INSTAGRAM ICONS -->
-    <div class="socialicons">
-
+      <!-- FACEBOOK AND INSTAGRAM ICONS -->
+      <div class="socialicons">
         <!--FACEBOOK-->
 
-        <a href="https://www.facebook.com/ShakespearePressMuseum/"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="https://www.facebook.com/ShakespearePressMuseum/"
+          ><img src="images/facebook.png" alt="Facebook"
+        /></a>
 
         <!--INSTAGRAM-->
 
-        <a href="https://www.instagram.com/shakespearepress/"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.instagram.com/shakespearepress/"
+          ><img src="images/instagram.png" alt="Instagram"
+        /></a>
+      </div>
     </div>
 
     <!-- PAGE RIP ILLUSION ELEMENT - LAYS ON TOP OF MAIN CONTENT -->
-    <img class="pagerip" src="images/paperrip-stretched.png">
+    <img class="pagerip" src="images/paperrip-stretched.png" />
 
     <!-- END OF PAGE RIP ELEMENT --->
-
-
-
 
     <!-- BEGINNING OF MAIN PAGE CONTENT TO BE CHANGED --->
 
     <div class="pagecontent">
+      <!-- SAMPLE TITLE,SUBTITLE, & BODY TEXT -->
 
-        <!-- SAMPLE TITLE,SUBTITLE, & BODY TEXT -->
+      <!-- HEADING -->
+      <!--- EST 1969 SECTION --->
+      <div class="est1969">
+        <h1>est. 1969</h1>
 
-        <!-- HEADING -->
-        <!--- EST 1969 SECTION --->
-        <div class="est1969">
-            <h1><br /><br />est. 1969</h1>
+        <!-- BODY TEXT -->
+        <p>
+          The Shakespeare Press Museum is a 19th century working letterpress
+          museum at Cal Poly, San Luis Obispo. The museum is maintained by
+          volunteer student curators who are assisted by a faculty adviser.
+        </p>
 
-            <!-- BODY TEXT -->
-            <p style="margin-left: 50px;">The Shakespeare Press Museum is a 19th century working letterpress museum at Cal Poly, San Luis Obispo. The museum is maintained by volunteer student curators who are assisted by a faculty adviser.</p>
+        <!-- FLOATS IMAGE TO THE RIGHT REMEMBER TO SET ALT TEXT -->
+        <img src="images/est1969.jpg" alt="Vintage Press" />
+      </div>
 
-            <!-- FLOATS IMAGE TO THE RIGHT REMEMBER TO SET ALT TEXT -->
-            <img class="right" src="images/est1969.jpg" alt="Vintage Press">
+      <!--- END OF EST 1969 section --->
 
+      <!--- LETTERPRESS section --->
+      <div class="letterpress">
+        <img src="images/letterpress.jpg" alt="Letterpress Examples" />
+        <div class="letterpressHeaderContainer">
+          <h1>Letterpress</h1>
+          <h2>WORKSHOPS &amp; CURRENT USES</h2>
         </div>
 
-        <!--- END OF EST 1969 section --->
+        <div>
+          <p id="letterpressDescription">
+            The primary function of the museum is to serve as a repository for
+            printing equipment that was used between 1850 and 1920 in
+            California. Our collections include many different types of printing
+            presses, many different fonts of type, and additional equipment and
+            tools that are necessary to staff a printing office. <br /><br />
 
-        <!--- LETTERPRESS section --->
-        <div class="letterpress">
-            <h1><br /><br />Letterpress</h1>
+            In addition to serving as a museum, the Shakespeare Press also
+            functions as a letterpress printing office. We believe that
+            providing visitors with the opportunity to print provides a link to
+            a better understanding of the past. We provide students, university
+            staff, and community members with the opportunity to learn by doing.
+          </p>
+        </div>
 
-            <h2>WORKSHOPS &amp; CURRENT USES</h2>
+        <!--- END of LETTERPRESS Section --->
+      </div>
+
+      <!--- Coursework section --->
+      <div class="coursework">
+        <img class="left" src="images/coursework.jpg" alt="Coursework" />
+        <h1>Coursework</h1>
+
+        <p>
+          Since The Shakespeare Press Museum is conveniently located on the
+          bottom floor of the Graphic Communication building, many Graphic
+          Communication-related clubs, associations, and classes consistently
+          take advantage of its equipment. The presses have been used to create
+          everything from flyers to club journals.
+        </p>
+      </div>
+      <!--- END of Coursework Section --->
+
+      <!--- Curators section --->
+      <div class="staff">
+        <!--- Curator 1 (Sage Rousso-Schindler) Section --->
+
+        <div class="curator" id="sage-curator">
+          <img
+            class="sage"
+            src="images/SageBioPicture.jpg"
+            alt="Sage Rousso-Schindler"
+          />
+
+          <div>
+            <div class="nameAndPronouns">
+              <h1>Sage Rousso-Schindler</h1>
+              <p class="pronouns">she/her/hers</p>
+            </div>
+            <h2>Head Curator, 2024</h2>
 
             <!-- BODY TEXT -->
             <br />
 
-            <!-- FLOATS IMAGE TO THE LEFT* REMEMBER TO SET ALT TEXT -->
-            <img class="left" src="images/letterpress.jpg" alt="Letterpress Examples">
-
-            <p>The primary function of the museum is to serve as a repository for printing equipment that was used between 1850 and 1920 in California. Our collections include many different types of printing presses, many different fonts of type, and additional equipment and tools that are necessary to staff a printing office.
-                <br /><br />
-
-                In addition to serving as a museum, the Shakespeare Press also functions as a letterpress printing office. We believe that providing visitors with the opportunity to print provides a link to a better understanding of the past. We provide students, university staff, and community members with the opportunity to learn by doing.
-
+            <p class="curator-or-developer-description">
+              &ldquo;Welcome to the Shakespeare Press Museum! My name is Sage
+              Rousso-Schindler, and I am a fourth year Graphic Communication
+              major with a concentration in Graphics for Packaging. I love that
+              the Shakespeare Press Museum is an interactive museum. Not only do
+              guests get to learn about the presses and their history, but they
+              can also &ldquo;Learn by Doing&rdquo; by setting their own type to
+              create art of their own!&rdquo;
             </p>
+          </div>
 
-            <!--- END of LETTERPRESS Section --->
+          <br /><br />
         </div>
 
-        <br />
+        <!--- END of Curator 1 (Sage Rousso-Schindler) Section --->
 
-        <!--- Coursework section --->
-        <div class="coursework">
-            <h1><br /><br />Coursework</h1>
+        <section class="coCuratorBar">
+          <ul class="coCuratorGrid">
+            <li class="cur1">
+              <!--- Curator 2 (Bucky) Section --->
+              <div class="curator" id="bucky">
+                <img src="images/BuckyBioPicture.jpg" alt="Bucky Stewart" />
+
+                <div>
+                  <div class="nameAndPronouns">
+                    <h1>Bucky Stewart</h1>
+                    <p class="pronouns">they/them/theirs</p>
+                  </div>
+                  <h2>Co-Curator, 2024</h2>
+
+                  <!-- BODY TEXT -->
+                  <br />
+
+                  <p class="curator-or-developer-description">
+                    &ldquo;My name is Bucky Stewart, and I am a third year
+                    Graphic Communication major with a concentration in UX/UI
+                    and an English minor. Since first learning about SPM my
+                    first year from other GrC majors, I have always had a love
+                    for the museum. Being able to be hands on with history is an
+                    experience not many other people get to have and is such an
+                    incredible opportunity.&rdquo;
+                  </p>
+                </div>
+
+                <br /><br />
+              </div>
+
+              <!--- END of Curator 2 (Bucky) Section --->
+            </li>
+            <li class="cur2">
+              <!--- Curator 3 (Liam) Section --->
+
+              <div class="curator" id="liam">
+                <img src="images/LiamBioPicture.jpg" alt="Liam Harwood" />
+
+                <div>
+                  <div class="nameAndPronouns">
+                    <h1>Liam Harwood</h1>
+                    <p class="pronouns">he/him/his</p>
+                  </div>
+                  <h2>Co-Curator, 2024</h2>
+
+                  <!-- BODY TEXT -->
+                  <br />
+
+                  <p class="curator-or-developer-description">
+                    &ldquo;My name is Liam Harwood, and I am a 2nd year
+                    Biomedical Engineering major with a concentration in
+                    Mechanical Design. I am excited to help any and all who come
+                    into the SPM to learn about its rich history and maybe
+                    convince them to help with the organization!&rdquo;
+                  </p>
+                </div>
+
+                <br /><br />
+              </div>
+
+              <!--- END of Curator 3 (Liam) Section --->
+            </li>
+          </ul>
+        </section>
+
+        <!--- Curator 4 (Ken) Section --->
+        <div class="curator" style="background-color: #fff">
+          <img class="ken" src="images/kenmacro.jpg" alt="Ken Macro" />
+
+          <div>
+            <h1>Ken Macro</h1>
+            <h2>Faculty Advisor</h2>
 
             <!-- BODY TEXT -->
             <br />
 
-            <!-- FLOATS IMAGE TO THE LEFT* REMEMBER TO SET ALT TEXT -->
-            <img class="left" src="images/coursework.jpg" alt="Coursework">
-
-            <p>Since The Shakespeare Press Museum is conveniently located on the bottom floor of the Graphic Communication building, many Graphic Communication-related clubs, associations, and classes consistently take advantage of its equipment. The presses have been used to create everything from flyers to club journals.</p>
-
-            <br /><br />
-
-            <div class="affiliates">
-                <ul>
-                    <li>
-                        <h2>Affiliate</h2>
-                    </li>
-                    <li>TAGA Club</li>
-                    <li>AIGA Club</li>
-                    <li>Mat Pica Pi</li>
-                    <li>Mustang News</li>
-                </ul>
-            </div>
-
+            <p class="curator-or-developer-description">
+              Dr. Ken Macro is a professor in the Graphic Communication
+              Department at The California Polytechnic State University in San
+              Luis Obispo, California. He leads courses in management
+              (production, operations, human resources), marketing and sales,
+              and entrepreneurialism. He specializes in innovative product
+              development, Lean manufacturing, knowledge management, and
+              epistemology. He is an avid bibliophile and has an affinity for
+              print history and incunabula. He has started four small businesses
+              and has held various leadership roles in the graphic communication
+              and healthcare industries.
+            </p>
+          </div>
+          <br /><br />
         </div>
-        <!--- END of Coursework Section --->
-        <br />
-        <br />
-        <br />
-        <br />
-        <!--- Curators section --->
-        <div class="staff">
-            
-            <!--- Curator 1 (Jackie) Section --->
 
-            <div class="curator" style="background-color: #fff;">
-                <img class="sage" src="images/sagerousso.jpg" alt="Sage Rousso-Schindler">
-                
-                <div>
-                    <h1>Sage Rousso-Schindler</h1>
-                    <h2>Museum Curator, 2024</h2>
-
-                    <!-- BODY TEXT -->
-                    <br />
-
-                    <p>&ldquo;I am a 4th year Graphic Communication major concentrating in Graphics for Packaging. &rdquo;</p>
-                </div>
-                
-                <br/><br/>
-            </div>
-
-            <!--- END of Curator 1 (Sage) Section --->
-            
-            
-                    <!--- Curator 3 (Riley) Section --->
-            <div class="curator" style="background-color: #fff;">
-                <img class="sierra" src="images/sierrabarnes.jpg" alt="Sierra Barnes">
+        <!-- Side by Side for Web Developers-->
+        <section class="developerBar">
+          <ul class="webDeveloperGrid">
+            <li class="dev1">
+              <!--- Web Developer 1 (Aidan) Section --->
+              <div class="curator" id="aidan">
+                <img src="images/AidanBioPicture.jpg" alt="Aidan Nesbitt" />
 
                 <div>
-                    <h1>Sierra Barnes</h1>
-                    <h2>Web Developer</h2>
+                  <div class="nameAndPronouns">
+                    <h1>Aidan Nesbitt</h1>
+                    <p class="pronouns">he/him/his</p>
+                  </div>
+                  <h2>Web Developer</h2>
 
-                    <!-- BODY TEXT -->
-                    
-                    <br />
+                  <!-- BODY TEXT -->
 
-                    <p>&ldquo;I am a fourth year Graphic Communication major concentrating in UX/UI and minoring in Spanish. I'm excited to be working with the Shakespeare Press Museum and learning more about the world of print! &rdquo;</p>
+                  <br />
+
+                  <p class="curator-or-developer-description">
+                    &ldquo;Hi! I'm a fourth year Graphic Communication major
+                    with a concentration in UX/UI and a minor in computer
+                    science. I'm looking forward to learning more about print
+                    and the Shakespeare Press Museum as I help update its
+                    website!&rdquo;
+                  </p>
                 </div>
-                <br/><br/>
-            </div>
-                    <!--- END of Curator 3 (Riley) Section --->
-      
-            
-                    <!--- Curator 4 (Ken) Section --->
-             <div class="curator">
-
-                
-                <img class="ken" src="images/kenmacro.jpg" alt="Ken Macro">
+                <br /><br />
+              </div>
+              <!--- END of Web Developer 1 (Aidan) Section --->
+            </li>
+            <li class="dev2">
+              <!--- Web Developer 2 (Sierra) Section --->
+              <div class="curator" id="sierra">
+                <img src="images/sierrabarnes.jpg" alt="Sierra Barnes" />
 
                 <div>
-                    <h1>Ken Macro</h1>
-                    <h2>Faculty Advisor</h2>
+                  <h1>Sierra Barnes</h1>
+                  <h2>Web Developer</h2>
 
-                    <!-- BODY TEXT -->
-                    <br />
+                  <!-- BODY TEXT -->
 
-                    <p>Dr. Ken Macro is a professor in the Graphic Communication Department at The California Polytechnic State University in San Luis Obispo, California. He leads courses in management (production, operations, human resources), marketing and sales, and entrepreneurialism. He specializes in innovative product development, Lean manufacturing, knowledge management, and epistemology. He is an avid bibliophile and has an affinity for print history and incunabula. He has started four small businesses and has held various leadership roles in the graphic communication and healthcare industries.</p>
+                  <br />
+
+                  <p class="curator-or-developer-description">
+                    &ldquo;I am a fourth year Graphic Communication major
+                    concentrating in UX/UI and minoring in Spanish. I'm excited
+                    to be working with the Shakespeare Press Museum and learning
+                    more about the world of print! &rdquo;
+                  </p>
                 </div>
-                <br/><br/>
-            </div>
-            <br />
-    <br />
-    <!--- Past Curators Section --->
-    <div class="curator">
-        <h1>Past Museum Curators</h1>
-        <h2>Jacqui Smith, 2023; Laura Sorvetti, 2022; Natalie Jones, 2021; Monica Reyes, 2020 </h2>
+                <br /><br />
+              </div>
+              <!--- END of Web Developer 2 (Sierra) Section --->
+            </li>
+          </ul>
+        </section>
+        <br />
+        <br />
+        <!--- Past Curators Section --->
+        <div class="curator pastCurator">
+          <h1>Past Museum Curators</h1>
+          <h2 class="pastCuratorList">
+            Jacqui Smith, 2023; Laura Sorvetti, 2022; Natalie Jones, 2021;
+            Monica Reyes, 2020
+          </h2>
+        </div>
+
+        <!--- END of Curator 4 (Ken) Section --->
+      </div>
     </div>
 
-                    <!--- END of Curator 2 (N/A) Section --->
-                    
-        </div>
-    </div>
-   
-    
     <!--FOOTER-->
     <footer>
+      <!-- LOGO LINKS TO HOME -->
+      <a href="index.html"><img class="footerlogo" src="images/logo.png" /></a>
+      <!-- END OF FOOTER LOGO -->
 
-        <!-- LOGO LINKS TO HOME -->
-        <a href="index.html"><img class="footerlogo" src="images/logo.png"></a>
-        <!-- END OF FOOTER LOGO -->
+      <!-- FOOTER NAV LINKS -->
+      <div>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="history.html">History</a></li>
+        </ul>
+      </div>
+      <div class="right-nav">
+        <ul>
+          <li><a href="presses.html">Presses</a></li>
+          <li><a href="visit.html">Visit</a></li>
+        </ul>
+      </div>
+      <!-- END OF FOOTER NAV LINKS -->
 
-        <!-- FOOTER NAV LINKS -->
-        <div>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="history.html">History</a></li>
-            </ul>
-        </div>
-        <div>
-            <ul>
-                <li><a href="presses.html">Presses</a></li>
-                <li><a href="visit.html">Visit</a></li>
-            </ul>
-        </div>
-        <!-- END OF FOOTER NAV LINKS -->
+      <!-- FOOTER SOCIAl MEDIA ICON LINKS  -->
+      <div class="socialicons">
+        <!-- FACEBOOK -->
+        <a href="https://www.facebook.com/ShakespearePressMuseum/"
+          ><img src="images/facebook.png" alt="Facebook"
+        /></a>
 
-        <!-- FOOTER SOCIAl MEDIA ICON LINKS  -->
-        <div class="socialicons">
+        <!-- INSTAGRAM -->
+        <a href="https://www.instagram.com/shakespearepress/"
+          ><img src="images/instagram.png" alt="Instagram"
+        /></a>
+      </div>
+      <!-- END OF FOOTER SOCIAL MEDIA -->
 
-            <!-- FACEBOOK -->
-            <a href="https://www.facebook.com/ShakespearePressMuseum/"><img src="images/facebook.png" alt="Facebook"></a>
-
-            <!-- INSTAGRAM -->
-            <a href="https://www.instagram.com/shakespearepress/"><img src="images/instagram.png" alt="Instagram"></a>
-        </div>
-        <!-- END OF FOOTER SOCIAL MEDIA -->
-
-        <!-- COPYRIGHT TEXT - INClUDES OUR NAMES -->
-        <p>Copyright &copy; 2019 Shakespeare Press Museum. Rachel Lackmann, Steven Nguyen, Sarah Koep. All rights reserved.</p>
+      <!-- COPYRIGHT TEXT - INClUDES OUR NAMES -->
+      <p>
+        Copyright &copy; 2019 Shakespeare Press Museum. Rachel Lackmann, Steven
+        Nguyen, Sarah Koep. All rights reserved.
+      </p>
     </footer>
     <!-- END OF COPYRIGHT TEXT -->
-
-</body></html>
+  </body>
+</html>
