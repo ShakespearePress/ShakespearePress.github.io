@@ -217,7 +217,8 @@ main {
   box-sizing: border-box; /* Ensures padding is included in width calculations */
 }
 
-.info-image img {
+.info-image img,
+.person img {
   width: 100%;
   height: auto;
 }
