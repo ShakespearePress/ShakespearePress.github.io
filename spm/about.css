@@ -492,6 +492,37 @@ footer p {
   padding-top: 0;
 }
 
+/* TODO : moved from media query */
+img.left {
+  max-width: 100%; /* Ensure it scales properly */
+  height: auto; /* Adjust height automatically */
+}
+
+nav a {
+  padding: 0;
+}
+
+.logo {
+  width: 15em;
+  margin-bottom: -1em;
+}
+
+.celebrating-50-years p {
+  font-size: 2.8em;
+  margin-top: 1em;
+  padding: 0em 0.5em;
+}
+
+.celebrating-50-years {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+}
+
+.socialicons {
+  margin-left: 1em;
+}
+
 @media only screen and (max-width: 1500px) {
   #aidan img,
   #sierra img,
@@ -725,7 +756,7 @@ footer p {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
   img.left {
     max-width: 100%; /* Ensure it scales properly */
     height: auto; /* Adjust height automatically */
@@ -744,15 +775,24 @@ footer p {
     font-size: 2.8em;
     margin-top: 1em;
     padding: 0em 0.5em;
+    margin-right: 1.5em;
   }
 
   .celebrating-50-years {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
   }
 
   .socialicons {
     margin-left: 1em;
+    padding-right: 1em;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: row;
   }
 
   .letterpress h1,
@@ -795,5 +835,31 @@ footer p {
   .letterpress img,
   .coursework img {
     margin-bottom: 0.5em;
+  }
+}
+
+/* Social Media icons now to the right of header */
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+  .celebrating-50-years {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+  }
+
+  .est1969 {
+    margin-top: 1em;
+  }
+
+  .letterpress img {
+    width: 90%;
+    margin: 0;
+  }
+
+  .celebrating-50-years {
+    margin-top: 1.5em;
+  }
+
+  img.pagerip {
+    margin-top: 1em;
   }
 }
