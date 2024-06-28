@@ -145,10 +145,32 @@ main {
 .people-developers,
 .info-past-curators,
 .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 1px solid black;
   width: 100%;
-  height: 50em;
+  height: 20em;
   margin: 0.25em 0; /* Optional: adds space between sections */
+}
+
+.top-half-container,
+.bottom-half-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid blue;
+  width: 100%;
+  height: 10em;
+  margin-bottom: 0.25em;
+}
+
+.top-half-container div,
+.bottom-half-container div {
+  border: 2px solid gray;
+  width: 90%;
+  height: 3em;
 }
 
 .curators-and-developers {
@@ -172,6 +194,14 @@ main {
   width: 90%;
   height: 10em;
   margin: 0.5em 0; /* Optional: adds space between people divs */
+}
+
+.header-and-description,
+.info-image {
+  border: 2px solid green;
+  width: 90%;
+  height: 10em;
+  margin-bottom: 1em;
 }
 
 @media only screen and (min-width: 900px) {
