@@ -129,6 +129,11 @@ table {
 }
 
 /* End CSS Reset */
+
+:root {
+  --dark-green: #495a4a;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -217,8 +222,13 @@ main {
   box-sizing: border-box; /* Ensures padding is included in width calculations */
 }
 
+.footer {
+  background: var(--dark-green);
+}
+
 .info-image img,
-.person img {
+.person img,
+.footer-logo img {
   width: 100%;
   height: auto;
 }
