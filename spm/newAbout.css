@@ -182,7 +182,8 @@ h2 {
 .header-and-description,
 .info-image,
 .footer-top-half,
-.footer-bottom-half {
+.footer-bottom-half,
+.section-break-image {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -297,21 +298,33 @@ h2 {
 .hero-header {
   color: white;
 }
+
 .non-header-footer-content {
   background: var(--light-background);
 }
+
+.header-nav-list,
+.footer-nav-list {
+  font-weight: 600;
+}
+
 .header-nav-list {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   gap: 0.5em;
+  padding: 0.75em;
 }
 
 .info-image img,
 .person img,
 .footer-logo img {
   width: 100%;
-  height: auto;
+}
+
+.section-break-image img {
+  width: 12.5em;
+  margin: 1.5em 0em;
 }
 
 .person img {
@@ -336,7 +349,7 @@ h2 {
 }
 
 .header-logo img {
-  width: 60%;
+  width: 12.5em;
   height: auto;
 }
 
@@ -405,6 +418,13 @@ h2 {
     width: 15em;
   }
 
+  .header-logo img {
+    width: 20em;
+  }
+
+  .section-break-image img {
+    width: 15em;
+  }
   /* Nav becomes a vertical list, with added left margin */
   .footer-nav-list {
     flex-direction: column;
