@@ -147,6 +147,21 @@ main {
   width: 100%;
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Yeseva One", serif;
+}
+
+h2 {
+  font-size: 3em;
+  color: var(--dark-green);
+  margin-top: 0.5em;
+}
+
+.header-and-description h2 {
+  margin-bottom: 0.25em;
+}
 .hero-header,
 .info-est-1969,
 .info-letterpress,
@@ -159,7 +174,6 @@ main {
   align-items: center;
   border: 1px solid black;
   width: 100%;
-  padding: 0.5em;
   box-sizing: border-box; /* Ensures padding is included in width calculations */
 }
 
@@ -193,6 +207,12 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100%; /* takes the full width of the main */
+  background: white;
+}
+
+.white-background {
+  background: white;
+  width: 100vw;
 }
 
 .people-single,
@@ -201,12 +221,20 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1em;
+  padding: 0.5em;
   box-sizing: border-box; /* Ensures padding is included in width calculations */
+}
+
+/* Slightly darker background to separate double sections from single - looks nice with single -> double -> single... */
+.people-double {
+  background: var(--light-background);
 }
 
 /* Each curator/developer div that has an image, header, and description */
 .person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 2px solid blue;
   width: 90%;
   height: auto; /* No fixed height */
@@ -230,8 +258,11 @@ main {
   width: 90%;
   height: auto; /* No fixed height */
   margin-bottom: 1em;
-  padding: 1em;
   box-sizing: border-box; /* Ensures padding is included in width calculations */
+}
+
+.header-and-description {
+  margin-top: 1em;
 }
 
 .footer {
@@ -239,9 +270,21 @@ main {
   color: white;
 }
 
+.footer-logo {
+  width: 10em;
+  margin: 1em 0em 1.5em 0em;
+}
+
 .footer-nav ul li,
 .header-nav ul li {
   list-style-type: none; /* Optional: remove bullet points */
+}
+
+.footer-nav-list {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25em;
+  margin-bottom: 0.25em;
 }
 
 .footer-nav a,
@@ -305,6 +348,28 @@ main {
   margin-top: 0.4em;
 }
 
+.footer-subscript {
+  display: flex;
+  justify-content: center;
+}
+.caption-italics {
+  font-style: italic;
+  font-size: 0.8em;
+  color: var(--light-background);
+  padding: 1em;
+  width: 80%;
+  text-align: center;
+}
+
+.past-curators-list {
+  text-align: center;
+  color: var(--lighter-green);
+  font-size: 1.25em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+
 .person-title {
   color: var(--lighter-green);
   font-size: 1.25em;
@@ -313,11 +378,48 @@ main {
   margin-bottom: 0.4em;
 }
 
+.centered-h2 {
+  text-align: center;
+}
+
 .pronouns {
   color: var(--lighter-green);
   margin-top: 0.3em;
   margin-bottom: 1.2em;
   font-style: italic;
+}
+
+@media only screen and (min-width: 425px) {
+  .person img {
+    width: 16em;
+  }
+}
+@media only screen and (min-width: 600px) {
+  /* At 600px and up, footer nav is to the right of logo */
+  .footer-top-half {
+    flex-direction: row;
+  }
+
+  /* make slightly larger */
+  .footer-logo {
+    width: 15em;
+  }
+
+  /* Nav becomes a vertical list, with added left margin */
+  .footer-nav-list {
+    flex-direction: column;
+    gap: 0.65em;
+    margin-left: 2em;
+  }
+
+  /* static width of person container so that text doesn't make container constantly expand  */
+  .person {
+    width: 27em;
+  }
+
+  .past-curators-list {
+    width: 25em;
+  }
 }
 
 @media only screen and (min-width: 900px) {
