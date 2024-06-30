@@ -156,7 +156,6 @@ h3 {
 h2 {
   font-size: 3em;
   color: var(--dark-green);
-  margin-top: 0.5em;
 }
 
 .header-and-description h2 {
@@ -172,7 +171,6 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
   width: 100%;
   box-sizing: border-box; /* Ensures padding is included in width calculations */
 }
@@ -188,7 +186,6 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid blue;
   width: 100%;
   margin-bottom: 0.25em;
   box-sizing: border-box; /* Ensures padding is included in width calculations */
@@ -197,7 +194,6 @@ h2 {
 /* Adjust divs inside the top and bottom half containers */
 .top-half-container div,
 .bottom-half-container div {
-  border: 2px solid gray;
   width: 100%;
   height: auto; /* No fixed height */
 }
@@ -236,7 +232,6 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid blue;
   width: 90%;
   height: auto; /* No fixed height */
   margin: 0.5em 0;
@@ -255,15 +250,9 @@ h2 {
 /* Header and description inside info sections */
 .header-and-description,
 .info-image {
-  border: 2px solid green;
   width: 90%;
   height: auto; /* No fixed height */
-  margin-bottom: 1em;
   box-sizing: border-box; /* Ensures padding is included in width calculations */
-}
-
-.header-and-description {
-  margin-top: 1em;
 }
 
 .footer {
@@ -315,9 +304,11 @@ h2 {
 .orange-text {
   color: #e7a373;
 }
+
 /* Bottom half of hero header styling */
 .celebrating-header {
   color: var(--light-background);
+  font-size: 2.75em;
   margin-top: 0.25em;
   margin: 0.25em 0em;
   text-align: center;
@@ -346,9 +337,32 @@ h2 {
   width: 100%;
 }
 
+.info-image img {
+  max-width: 25em;
+}
+
 .section-break-image img {
   width: 12.5em;
-  margin: 1em 0em;
+  margin: 2em 0em;
+}
+
+.top-margin-h2 {
+  margin-top: 0.75em;
+}
+
+.small-margin-top {
+  margin-top: 1em;
+}
+
+.description p {
+  margin-bottom: 1.5em;
+  max-width: 25em;
+  text-align: center;
+}
+
+/* this top margin will change differently than the other h2s, because of the page rip effect that is above the h2 this is applied to */
+.page-rip-margin-top {
+  margin-top: 1em;
 }
 
 .person img {
@@ -384,6 +398,7 @@ img.pagerip {
 .header-logo img {
   width: 12.5em;
   height: auto;
+  padding: 0.5em 0;
 }
 
 /* people styling */
@@ -413,7 +428,7 @@ img.pagerip {
   font-size: 1.25em;
   font-weight: 600;
   text-transform: uppercase;
-  margin-bottom: 1em;
+  margin-bottom: 3em;
 }
 
 .person-title {
@@ -435,11 +450,18 @@ img.pagerip {
   font-style: italic;
 }
 
+/* last person on the page, no margin/padding bottom needed (causes too much spacing)*/
+.last-person-no-margin {
+  margin-bottom: 0;
+  padding: 0;
+}
+
 @media only screen and (min-width: 425px) {
   .person img {
     width: 16em;
   }
 }
+
 @media only screen and (min-width: 600px) {
   /* At 600px and up, footer nav is to the right of logo */
   .footer-top-half {
@@ -452,7 +474,13 @@ img.pagerip {
   }
 
   .header-logo img {
-    width: 20em;
+    width: 17em;
+    padding: 0.75em 0em;
+  }
+
+  .celebrating-header {
+    font-size: 4em;
+    margin-bottom: 0.45em;
   }
 
   .section-break-image img {
@@ -473,14 +501,95 @@ img.pagerip {
   .past-curators-list {
     width: 25em;
   }
+
+  .non-header-footer-content {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 725px) {
+  /* needed so that page rip effect doesn't occlude header */
+  .page-rip-margin-top {
+    margin-top: 1.5em;
+  }
+
+  /* images and text can scale slightly larger */
+  .info-image img,
+  .description p {
+    max-width: 32.5em;
+  }
+
+  /* add .2em more spacing for break image */
+  .section-break-image {
+    margin: 2.1em 0em;
+  }
+
+  img.pagerip {
+    margin-top: -1.5em;
+  }
 }
 
 @media only screen and (min-width: 900px) {
-  .people-double {
+  /* causes the doubled people sections (developers, co-curators), to become aligned as a row, not column */
+  .people-container {
+    display: flex;
     flex-direction: row;
+    align-items: flex-start; /* Aligns child items at the top */
+    padding: 1em 0em;
+    gap: 1.25em;
   }
 
-  .people-double .person {
-    margin: 0em 0.5em;
+  /* info-images can be larger as screen size increases; add a little bit more margin to separate from the text as hierarchy changes with bigger image */
+  .info-image img {
+    max-width: 40em;
+    margin-top: 0.5em;
+  }
+
+  /* reset margins and padding from previous sizes: */
+  .person {
+    margin: 0;
+    padding: 1.4em 0em;
+  }
+  /* bio's will not increase in size, fixed width */
+  .person-bio {
+    width: 25em;
+  }
+  /* kens bio is longer so make it wider */
+  .ken-bio {
+    width: 28em;
+  }
+
+  /* this margin-top effect is not needed in row configuration */
+  .small-margin-top {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  /* add more margins so that page rip doesn't cover header */
+  .page-rip-margin-top {
+    margin-top: 2em;
+  }
+  img.pagerip {
+    margin-top: -2em;
+  }
+
+  /* row instead of column, icons now to the right of header text */
+  .bottom-half-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+  }
+
+  /* makes the divs the size of their content so they can be centered using flex*/
+  .bottom-half-container div {
+    width: auto;
+  }
+
+  /* icons now in a column, margin left to space from text */
+  .icons ul {
+    flex-direction: column;
+    margin-left: 2.5em;
   }
 }
