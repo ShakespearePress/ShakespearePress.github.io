@@ -297,6 +297,7 @@ h2 {
 
 .hero-header {
   color: white;
+  margin-bottom: 1.75em;
 }
 
 .non-header-footer-content {
@@ -324,7 +325,7 @@ h2 {
 
 .section-break-image img {
   width: 12.5em;
-  margin: 1.5em 0em;
+  margin: 1em 0em;
 }
 
 .person img {
@@ -334,6 +335,15 @@ h2 {
 .header-logo {
   display: flex;
   justify-content: center;
+}
+
+/* PAGE RIP ELEMENT - SIZE AND ALIGNMENT */
+img.pagerip {
+  width: 100%; /* Ensure it doesn't exceed 100% width */
+  z-index: 100;
+  position: absolute;
+  margin-top: -1em;
+  margin-left: 0;
 }
 
 .cover {
@@ -423,7 +433,7 @@ h2 {
   }
 
   .section-break-image img {
-    width: 15em;
+    width: 12.5em;
   }
   /* Nav becomes a vertical list, with added left margin */
   .footer-nav-list {
