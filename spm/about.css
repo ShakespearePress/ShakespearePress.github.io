@@ -45,7 +45,7 @@ html {
 
 /* FIRST HEADING LEVEL */
 h1 {
-  : "Yeseva One", serif;
+  font-family: "Yeseva One", serif;
   font-size: 3em;
   color: #495a4a;
   font-weight: 100;
