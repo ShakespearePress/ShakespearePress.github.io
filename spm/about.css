@@ -1,146 +1,409 @@
-/* CSS BASE CODE < CHANGE THIS TO TITLE OF PAGE */
+/* CSS RESET:
+ http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-/* ------------------------------------ */
+/* Note: Hello! I tried to organize this file and added comments as best I could. However, a lot of
+the stylings aren't necessarily located within specific sections, so it's easiest to locate styles
+by doing ctrl+f and searching for them!
 
-/* STYLES LOGO */
-.logo {
-  width: 25em;
-  padding: 2em;
-  float: left;
-  transition: 0.5s ease-in-out;
+On another note, if you are updating this website in the future, please try to stick to using flexbox -
+it makes it a lot easier and simpler to design for larger screens! If you have any questions, you can send me an email: aidannesbitt20@gmail.com :) */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-/* FADES LOGO ON HOVER */
-.logo:hover {
-  opacity: 0.8;
-  transition: 0.5s ease-in-out;
+/* End CSS Reset */
+
+:root {
+  --dark-green: #495a4a;
+  --light-background: #faf9f6;
+  --lighter-green: #cdaba9;
 }
-font-family
-/* BODY - APPLYS ALL */
+
 body {
   font-family: "Chivo", sans-serif;
   font-weight: 400;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Prevent horizontal overflow */
 }
-
-html {
-  overflow-x: hidden; /* Prevent horizontal overflow */
-}
-
-* {
-  box-sizing: border-box; /* Ensure padding and borders are included in the total width and height */
-}
-
-/* HEADER CAPTION */
-.celebrating-50-years p {
-  margin: 4.8em 0 0.5em 0;
-  font-family: "Yeseva One", serif;
-  color: #fdf8f2;
-  font-weight: 100;
-  padding: 0 0.5em;
-  line-height: 95%;
-}
-
-/* FIRST HEADING LEVEL */
-h1 {
-  font-family: "Yeseva One", serif;
-  font-size: 3em;
-  color: #495a4a;
-  font-weight: 100;
-  padding: 0.5em 1em 0 1em;
-  position: relative;
-  z-index: 1;
-}
-
-/* SUBHEADING LEVEL */
-h2 {
-  color: #495a4a;
-  text-transform: uppercase;
-  font-size: 1.5em;
-  padding: 0.5em 1em 0 1em;
-}
-
-/* BODY TEXT PARAGRAPH */
-p {
-  padding: 0.5em 0em;
-  font-size: 1em;
-  width: 30em;
-}
-
-/* COVER IMAGE */
-.cover {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  z-index: -2;
-  filter: grayscale(100%) contrast(70%) brightness(50%) sepia(100%)
-    hue-rotate(340deg) saturate(120%);
-  object-fit: cover; /* Ensures the image covers the entire element */
-}
-
-/* MAKES FONT WEIGHT LIGHTER - SPAN ELEMENT */
-.light {
-  font-weight: 100;
-}
-
-/* MAKES FONT ORANGE - SPAN ELEMENT */
-.orange {
-  color: #e7a373;
-}
-
-/* STYLES NAV ELEMENTS */
-header {
-  margin: 0;
-  width: 100%;
-  height: 5.1em;
-  position: relative;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-/* NAV LINKS */
-a {
-  text-decoration: none;
-}
-
-nav a {
-  color: #fdf8f2;
-  padding: 2em 1.2em 0.7em 1.3em;
-  font-weight: 700;
-  font-size: 1.1em;
-  letter-spacing: 0.03em;
-  transition: 0.5s ease-in-out;
-}
-
-nav a:hover {
-  background: #cdaba9;
-  color: #fdf8f2;
-  transition: 0.5s ease-in-out;
-}
-
-/* NAV LINKS - FLEX BOX */
-nav ul {
+main {
   display: flex;
-  justify-content: flex-end;
-  text-transform: uppercase;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Yeseva One", serif;
+}
+
+h2 {
+  font-size: 3em;
+  color: var(--dark-green);
+}
+
+.header-and-description h2 {
+  margin-bottom: 0.25em;
+}
+
+.hero-header,
+.info-est-1969,
+.info-letterpress,
+.info-coursework,
+.curators-and-developers,
+.info-past-curators,
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding is included in width calculations */
+}
+
+.top-half-container,
+.bottom-half-container,
+.header-and-description,
+.info-image,
+.footer-top-half,
+.footer-bottom-half,
+.section-break-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 0.25em;
+  box-sizing: border-box; /* Ensures padding is included in width calculations */
+}
+
+/* Adjust divs inside the top and bottom half containers */
+.top-half-container div,
+.bottom-half-container div {
+  width: 100%;
+  height: auto; /* No fixed height */
+}
+
+/* Curators and developers section */
+.curators-and-developers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* takes the full width of the main */
+  background: white;
+}
+
+.people-single,
+.people-double {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em;
+  box-sizing: border-box; /* Ensures padding is included in width calculations */
+}
+
+/* Slightly darker background to separate double sections from single - looks nice with single -> double -> single... */
+.people-double {
+  background: var(--light-background);
+}
+
+.people-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Each curator/developer div that has an image, header, and description */
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: auto; /* No fixed height */
+  margin: 0.5em 0;
   padding: 1em;
+  box-sizing: border-box; /* Ensures padding is included in width calculations */
 }
 
-a.currentpage {
-  color: #e7a373;
+.person-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-nav ul li {
-  list-style-type: none;
+/* converts each staff image to grayscale */
+.person img {
+  filter: grayscale(100%);
+}
+
+/* Header and description inside info sections */
+.header-and-description,
+.info-image {
+  width: 90%;
+  height: auto; /* No fixed height */
+  box-sizing: border-box; /* Ensures padding is included in width calculations */
+}
+
+/* mostly footer styling */
+.footer {
+  background: var(--dark-green);
+  color: white;
+}
+
+.footer-logo {
+  width: 10em;
+  margin: 1em 0em 1.5em 0em;
+}
+
+.footer-nav ul li,
+.header-nav ul li {
+  list-style-type: none; /* Optional: remove bullet points */
+}
+
+.footer-nav-list {
+  display: flex;
   flex-direction: row;
+  gap: 1.25em;
+  margin-bottom: 0.25em;
+}
+
+.footer-nav a,
+.header-nav a {
+  color: white; /* Ensure text color is white */
+  text-decoration: none; /* Remove underline from links */
+  text-transform: uppercase;
+}
+
+.footer-subscript {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-nav a:hover,
+.header-nav a:hover {
+  cursor: pointer;
+  color: var(--lighter-green);
+}
+
+.hero-header {
+  color: white;
+  margin-bottom: 1.75em;
+}
+
+.icons-img {
+  width: 1.65em;
+  height: auto;
+}
+
+.icons ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.65em;
+}
+
+/* Bottom half of hero header styling */
+.celebrating-header {
+  color: var(--light-background);
+  font-size: 2.75em;
+  margin-top: 0.25em;
+  margin: 0.25em 0em;
+  text-align: center;
+}
+
+.non-header-footer-content {
+  background: var(--light-background);
+}
+
+.header-nav-list,
+.footer-nav-list {
+  font-weight: 600;
+}
+
+.header-nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 0.5em;
+  padding: 0.75em;
+  padding-top: 1em;
+}
+
+/* past curators section */
+p.past-curators-list {
+  text-align: center;
+  color: var(--lighter-green);
+  font-size: 1.25em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+
+.info-image img,
+.person img,
+.footer-logo img {
+  width: 100%;
+}
+
+.info-image img {
+  max-width: 25em;
+}
+
+.section-break-image img {
+  width: 12.5em;
+  margin: 2em 0em;
+}
+
+.description p {
+  margin-bottom: 1.5em;
+  max-width: 25em;
+  text-align: center;
+}
+
+/* this top margin will change differently than the other h2s, because of the page rip effect that is above the h2 this is applied to */
+.page-rip-margin-top {
+  margin-top: 1em;
+}
+
+.person img {
+  border-radius: 8px;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: center;
+}
+
+/* positions this section above the page rip effect */
+.info-est-1969 {
+  position: relative;
+  z-index: 1000;
 }
 
 /* PAGE RIP ELEMENT - SIZE AND ALIGNMENT */
@@ -148,718 +411,234 @@ img.pagerip {
   width: 100%; /* Ensure it doesn't exceed 100% width */
   z-index: 100;
   position: absolute;
-  margin-top: -1%;
+  margin-top: -1em;
   margin-left: 0;
 }
 
-/* SOCIAL ICONS */
-.socialicons {
-  z-index: 100;
-  position: relative;
-  float: right;
-  margin-top: -3em;
-}
-
-.socialicons img {
-  width: 2em;
-  margin: 0.3em;
-  transition: 0.5s;
-}
-
-.socialicons img:hover {
-  filter: brightness(65%) sepia(100%) hue-rotate(-20deg) saturate(140%);
-  transition: 0.5s;
-}
-
-/* MAIN PAGE CONTENT DIV */
-.pagecontent {
-  padding-top: 1.5em;
-  position: relative;
-  width: 100vw;
-  margin-top: 4em;
-  background-color: #fdf8f2;
-  z-index: 0;
-  margin-left: 0;
-  padding-bottom: 20em;
-}
-
-/*IMAGE FLOAT LEFT*/
-img.left {
-  float: left;
-  width: 100%; /* Ensure it scales */
-  margin: 0 0 0 2em;
-  opacity: 0.7;
-}
-
-/*IMAGE FLOAT RIGHT*/
-img.right {
-  float: right;
-  width: 100%; /* Ensure it scales */
-  margin: -20em 10em 0 0;
-  opacity: 0.7;
-}
-
-/* FOOTER */
-footer {
-  position: absolute;
-  margin: 0;
-  margin-top: -15em;
-  left: 0;
-  right: 0;
+.cover {
+  position: fixed;
+  overflow: hidden;
   width: 100%;
-  background-color: #495a4a;
-  padding: 1.5em 0.35em 1em 1em;
+  height: 100vh;
+  z-index: -2;
+  filter: grayscale(100%) contrast(70%) brightness(50%) sepia(100%)
+    hue-rotate(340deg) saturate(120%);
+  object-fit: cover; /* Ensures the image covers the entire element */
+  margin-top: -1em; /* otherwise, there is a small gap at the top of the page*/
 }
 
-/* FOOTER LOGO */
-.footerlogo {
-  margin-right: 3em;
-  width: 15em;
-  float: left;
+.header-logo img {
+  width: 12.5em;
+  height: auto;
+  padding: 0.5em 0;
 }
 
-footer a {
-  text-decoration: none;
-  color: #fdf8f2;
-}
-
-footer a:hover {
-  background: none;
-  color: #e7a373;
-  transition: 1s;
-}
-
-footer ul li {
-  margin-left: -1em;
-  padding-bottom: 1em;
-  list-style-type: none;
-  text-transform: uppercase;
+/* people styling */
+.person-name {
+  color: var(--dark-green);
+  font-size: 2.25em;
   font-weight: 700;
-  color: #fdf8f2;
+  margin-top: 0.4em;
 }
 
-/* APPLIES LEFT BORDER */
-footer div {
-  margin-left: 5%;
-  width: 20%;
-  border-left: 3px solid white;
-  float: left;
-  height: 6em;
+.person-title {
+  color: var(--lighter-green);
+  font-size: 1.25em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.4em;
 }
 
-/* FOOTER SOCIAL ICONS */
-footer .socialicons {
-  margin: 0 3em 0 0;
-  width: 6em;
-  height: 3em;
-  border: none;
+.pronouns {
+  color: var(--lighter-green);
+  margin-top: 0.3em;
+  margin-bottom: 1.2em;
+  font-style: italic;
 }
 
-footer p {
-  display: block;
-  font-size: 0.75em;
-  font-weight: 100;
-  color: #fdf8f2;
-  padding: 12em 0 1em 0;
-  text-align: left;
-  width: 80em;
+/* last person on the page, no margin/padding bottom needed (causes too much spacing)*/
+.last-person-no-margin {
+  margin-bottom: 0;
+  padding: 0;
 }
 
-/* --------- Custom About Page Code (not part of base code) --------- */
-
-/* ---- EST 1969 section ----- */
-.est1969 {
-  margin: -10em 0 -2em 10em;
+/* random, mostly single-use stylings */
+.caption-italics {
+  font-style: italic;
+  font-size: 0.8em;
+  color: var(--light-background);
+  padding: 1em;
+  width: 80%;
+  text-align: center;
 }
 
-.est1969 h1 {
-  font-size: 5em;
+.orange-text {
   color: #e7a373;
 }
 
-.est1969 p {
-  margin-top: -3em;
-  line-height: 150%;
+.centered-h2 {
+  text-align: center;
 }
 
-.est1969 img {
-  margin: -15em 6em 0 0;
-  width: 35%;
-}
-
-/* Footer Nav Links */
-.right-nav {
-  margin-left: 2em;
-}
-
-/* ---- LETTERPRESS Section ----- */
-.letterpress {
-  margin-top: 5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: right;
-  width: 95%;
-}
-
-.letterpress h1 {
-  margin: 0 1em 0 0;
-  padding: 0;
-  font-size: 5em;
-  text-align: right;
-}
-
-.letterpress img {
-  opacity: 0.5;
-  width: 30%;
-  height: 30%;
-  z-index: -1;
-  margin-left: 4em;
-}
-
-.letterpress h2 {
-  font-size: 1em;
-  color: #cdaba9;
-  text-align: right;
-  margin: 0 5em 0 0;
-  padding: 0;
-}
-
-.letterpressHeaderContainer {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  justify-content: right;
-}
-
-/* ---- Coursework Section ----- */
-.coursework {
-  margin: -10em 0 0 0;
-}
-
-.coursework h1 {
-  margin: 0 0 0 1.5em;
-  font-size: 5em;
-  color: #845018;
-}
-
-.coursework p {
-  margin: -1em 0 0 11em;
-  width: 30%;
-}
-
-.coursework img {
-  margin: -4em 1em 2em 30em;
-  opacity: 0.4;
-  width: 50%;
-  z-index: -1;
-}
-
-/* ---- Curators Section ----- */
-.staff {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  margin-top: 4em;
-  align-items: center; /* Center align items */
-}
-
-.curator {
-  display: flex;
+.white-background {
+  background: white;
   width: 100vw;
-  align-items: center;
-  justify-content: center;
-  margin: 0.5em auto; /* Center the curator section */
-  padding: 2em 0;
 }
 
-.curator img {
-  width: 20em;
-  height: 20em;
-  object-fit: cover;
-  object-position: center;
-  margin: 2em 5em;
-  align-self: center;
-  opacity: 0.7;
+.top-margin-h2 {
+  margin-top: 0.75em;
 }
 
-#sage-curator {
-  background: #fff;
-}
-
-.curator h1,
-.curator h2,
-.curator p {
-  padding: 0;
-  margin: 0;
-  text-align: center; /* Center text inside the curator div */
-}
-
-.curator h1 {
-  margin-bottom: 0.3em;
-}
-
-.curator h2 {
-  color: #cdaba9;
-}
-
-.pastCuratorList {
-  width: 90%;
-}
-
-.curator p {
-  width: 90%;
-  position: relative;
-  margin: auto;
-  top: -0.7em;
-}
-
-/* PRONOUNS STYLING */
-.pronouns {
-  font-size: 1em;
-  font-style: italic;
-  color: #cdaba9;
-  margin-bottom: 1em;
-}
-
-.nameAndPronouns h1 {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 0.25em;
-}
-
-.nameAndPronouns {
-  margin-bottom: 1em;
-}
-
-/* About Page, Side By Side Bio Stylings */
-
-/* Co-Curator Bar Styles */
-.developerBar,
-.coCuratorBar {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.webDeveloperGrid,
-.coCuratorGrid {
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
-  justify-content: center;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.webDeveloperGrid li,
-.coCuratorGrid li {
-  width: 100%; /* Ensure full width for each list item */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1em 0;
-}
-
-#aidan img,
-#sierra img,
-#bucky img,
-#liam img {
-  width: 15em;
-  height: 15em;
-}
-
-#aidan,
-#sierra,
-#bucky,
-#liam {
-  margin: 0;
-  padding: 0;
-}
-
-.dev2,
-.cur2 {
-  margin-left: 2em;
-}
-
-#aidan h1,
-#sierra h1,
-#bucky h1,
-#liam h1 {
-  font-size: 2.5em;
-}
-
-.pastCurator {
-  padding-top: 0;
-}
-
-/* TODO : moved from media query */
-img.left {
-  max-width: 100%; /* Ensure it scales properly */
-  height: auto; /* Adjust height automatically */
-}
-
-nav a {
-  padding: 0;
-}
-
-.logo {
-  width: 15em;
-  margin-bottom: -1em;
-}
-
-.celebrating-50-years p {
-  font-size: 2.8em;
+.small-margin-top {
   margin-top: 1em;
-  padding: 0em 0.5em;
 }
 
-.celebrating-50-years {
-  display: flex;
-  flex-direction: row;
-  align-items: end;
+/* BELOW ARE MEDIA QUERIES USED TO ADJUST THE STYLING BASED ON SCREEN SIZE:
+The above styles are for the website at the smallest screen sizes (~320px),
+and each subsequent media query makes the styling work above its min-width.*/
+
+@media only screen and (min-width: 425px) {
+  /* person bio images slightly larger */
+  .person img {
+    width: 16em;
+  }
 }
 
-.socialicons {
-  margin-left: 1em;
-}
-
-@media only screen and (max-width: 1500px) {
-  #aidan img,
-  #sierra img,
-  #liam img,
-  #bucky img {
-    width: 12em;
-    height: 12em;
+@media only screen and (min-width: 600px) {
+  /* At 600px and up, footer nav is to the right of logo */
+  .footer-top-half {
+    flex-direction: row;
   }
 
-  dd {
+  /* make slightly larger */
+  .footer-logo {
+    width: 15em;
+    padding-top: 1em;
+  }
+
+  .header-logo img {
+    width: 17em;
+    padding: 0.75em 0em;
+  }
+
+  .celebrating-header {
     font-size: 4em;
+    margin-bottom: 0.45em;
   }
 
-  .webDeveloperGrid,
-  .coCuratorGrid {
-    display: flex;
+  .section-break-image img {
+    width: 12.5em;
+  }
+
+  /* Nav becomes a vertical list, with added left margin */
+  .footer-nav-list {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    width: 90%;
+    gap: 0.65em;
+    margin-left: 2em;
   }
 
-  .dev2,
-  .cur2 {
-    margin-left: 0;
-    margin-top: 0.25em;
+  /* static width of person container so that text doesn't make container constantly expand  */
+  .person {
+    width: 27em;
+  }
+
+  p.past-curators-list {
+    width: 25em;
+    margin-bottom: 3em;
+  }
+
+  .non-header-footer-content {
+    width: 100%;
   }
 }
 
-/**MEDIA QUERIES**/
-@media only screen and (max-width: 900px) {
-  /* ----- General Responsive Styles ----- */
-  header {
-    height: 10em;
-    display: flex;
-    flex-direction: column-reverse;
+@media only screen and (min-width: 725px) {
+  /* images and text can scale slightly larger */
+  .info-image img,
+  .description p {
+    max-width: 32.5em;
   }
 
-  .logo {
-    float: none;
-    display: block;
-    margin: auto;
-    margin-bottom: -4em;
-    padding: 2em 0 0 0;
-  }
-
-  nav ul {
-    padding: 0;
-    margin: 0;
-  }
-
-  nav ul li {
-    text-align: center;
-    margin: 0 auto;
-    align-content: center;
-  }
-
-  nav a {
-    transition: 0.5s ease-in-out;
-  }
-
-  nav a:hover {
-    background: none;
-    color: #e7a373;
-  }
-
-  dd {
-    margin: 2em 0 0 0;
-  }
-
-  .cover {
-    position: absolute; /* Change to absolute to prevent fixed positioning issues */
-    height: 100vh; /* Use viewport height */
+  /* add .2em more spacing for break image */
+  .section-break-image {
+    margin: 2.1em 0em;
   }
 
   img.pagerip {
-    margin-top: 3em;
-    width: 100%; /* Ensure it doesn't exceed 100% width */
+    margin-top: -1.5em;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  /* causes the doubled people sections (developers, co-curators), to become aligned as a row, not column */
+  .people-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Aligns child items at the top */
+    padding: 1em 0em;
+    gap: 1.25em;
   }
 
-  img.right,
-  img.left {
-    display: block;
-    float: none;
-    clear: both;
-    margin: auto;
-    max-width: 100%; /* Ensure it doesn't exceed 100% width */
+  /* info-images can be larger as screen size increases; add a little bit more margin to separate from the text as hierarchy changes with bigger image */
+  .info-image img {
+    max-width: 40em;
+    margin-top: 0.5em;
   }
 
-  p {
-    clear: both;
-    width: 80%;
-    margin: auto;
+  /* reset margins and padding from previous sizes: */
+  .person {
+    margin: 0;
+    padding: 1.4em 0em;
+  }
+  /* bio's will not increase in size, fixed width */
+  .person-bio {
+    width: 25em;
+  }
+  /* kens bio is longer so make it wider */
+  .ken-bio {
+    width: 28em;
   }
 
-  .footerlogo {
-    width: 40%;
-    margin: auto;
+  /* this margin-top effect is not needed in row configuration */
+  .small-margin-top {
+    margin: 0;
   }
 
-  footer div {
-    width: 20%;
-    margin: 0 0 0 1em;
-    height: auto;
+  /* a little more space between header nav and top of browser */
+  .header-nav-list {
+    padding-top: 1.5em;
   }
+}
 
-  footer .socialicons {
-    clear: both;
-    float: none;
-    width: 5.5em;
-    margin: auto;
-    padding-top: 1em;
-  }
-
-  footer p {
-    width: 90%;
-    padding-top: 1em;
-  }
-
-  .socialicons {
-    margin-top: 0;
-  }
-
-  .est1969 {
-    margin: auto;
-  }
-
-  .est1969 h1 {
-    font-size: 5em;
-    color: #e7a373;
+@media only screen and (min-width: 1000px) {
+  /* add more margins so that there is no white space revealed behind page rip effect */
+  img.pagerip {
     margin-top: -2em;
   }
 
-  .est1969 p {
-    margin-top: -3em;
-    line-height: 150%;
-  }
-
-  .est1969 img {
-    width: 100%;
-    display: block;
-    float: none;
-    clear: both;
-    margin: auto;
-  }
-
-  .coursework {
-    margin: 0;
-    padding: 0;
-  }
-
-  .coursework h1 {
-    font-size: 4em;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  /* row instead of column, icons now to the right of header text */
+  .bottom-half-container {
+    flex-direction: row;
+    align-items: center;
     justify-content: center;
+    margin-bottom: 1em;
   }
 
-  .coursework p {
-    display: block;
-    clear: both;
-    float: none;
-    margin: auto;
-    width: 90vw;
+  /* makes the divs the size of their content so they can be centered using flex*/
+  .bottom-half-container div {
+    width: auto;
   }
 
-  .affiliates {
-    margin: -3.5em 0 0 0;
-    float: none;
-    clear: both;
-  }
-
-  .curator {
+  /* icons now in a column, margin left to space from text */
+  .icons ul {
     flex-direction: column;
-    align-items: center; /* Ensure items are centered */
-  }
-
-  .curator img {
-    margin: 1em 0;
-  }
-
-  .curator h1,
-  .curator h2,
-  .curator p {
-    text-align: center;
-  }
-
-  footer {
-    width: 99vw;
-  }
-
-  /* ----- Letterpress Section Responsive Styles ----- */
-  .letterpress {
-    margin-top: -5em;
-  }
-
-  .letterpress img {
-    width: 100%;
-    padding: 1em;
-    margin: auto;
-  }
-
-  .letterpressHeaderContainer {
-    padding: 0em;
-  }
-
-  .letterpressHeaderContainer h1,
-  .letterpressHeaderContainer h2 {
-    margin: 0;
-  }
-
-  #letterpressDescription {
-    display: block;
-    clear: both;
-    float: none;
-    margin: auto;
-    width: 90%;
-  }
-
-  .letterpress h1 {
-    display: flex;
-    margin: auto;
-    justify-content: center;
-  }
-
-  .letterpress h2 {
-    display: flex;
-    justify-content: center;
+    margin-left: 2.5em;
   }
 }
 
-@media only screen and (max-width: 800px) {
-  img.left {
-    max-width: 100%; /* Ensure it scales properly */
-    height: auto; /* Adjust height automatically */
-  }
-
-  nav a {
-    padding: 0;
-  }
-
-  .logo {
-    width: 15em;
-    margin-bottom: -1em;
-  }
-
-  .celebrating-50-years p {
-    font-size: 2.8em;
-    margin-top: 1em;
-    padding: 0em 0.5em;
-    margin-right: 1.5em;
-  }
-
-  .celebrating-50-years {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-  }
-
-  .socialicons {
-    margin-left: 1em;
-    padding-right: 1em;
-  }
-
-  .bottom {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .letterpress h1,
-  .coursework h1 {
-    font-size: 3em;
-  }
-
-  .est1969 h1 {
-    margin-top: -0.5em;
-  }
-
-  .est1969 img {
-    width: 90%;
-  }
-
-  .curator-or-developer-description {
-    width: 100%;
-  }
-
-  .coursework {
-    display: flex;
-    flex-direction: column;
-    margin-top: 4em;
-  }
-
-  .coursework img {
-    width: 90%;
-  }
-
-  .coursework h1 {
-    margin: 0;
-    padding: 0;
-  }
-
-  .letterpress {
-    display: flex;
-    margin: 3em 0em 2em 0.5em;
-  }
-
-  .letterpress img,
-  .coursework img {
-    margin-bottom: 0.5em;
-  }
-}
-
-/* Social Media icons now to the right of header */
-@media only screen and (min-width: 600px) and (max-width: 800px) {
-  .celebrating-50-years {
-    display: flex;
-    flex-direction: row;
-    align-items: end;
-  }
-
-  .est1969 {
-    margin-top: 1em;
-  }
-
-  .letterpress img {
-    width: 90%;
-    margin: 0;
-  }
-
-  .celebrating-50-years {
-    margin-top: 1.5em;
-  }
-
+@media only screen and (min-width: 1400px) {
+  /* add more margins so that there is no white space revealed behind page rip effect */
   img.pagerip {
-    margin-top: 1em;
+    margin-top: -2.5em;
   }
 }
