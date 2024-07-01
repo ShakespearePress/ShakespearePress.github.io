@@ -1,7 +1,15 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* CSS RESET:
+ http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+
+/* Note: Hello! I tried to organize this file and added comments as best I could. However, a lot of
+the stylings aren't necessarily located within specific sections, so it's easiest to locate styles
+by doing ctrl+f and searching for them!
+
+On another note, if you are updating this website in the future, please try to stick to using flexbox -
+it makes it a lot easier and simpler to design for larger screens! If you have any questions, you can send me an email: aidannesbitt20@gmail.com :) */
 
 html,
 body,
@@ -161,6 +169,7 @@ h2 {
 .header-and-description h2 {
   margin-bottom: 0.25em;
 }
+
 .hero-header,
 .info-est-1969,
 .info-letterpress,
@@ -207,11 +216,6 @@ h2 {
   background: white;
 }
 
-.white-background {
-  background: white;
-  width: 100vw;
-}
-
 .people-single,
 .people-double {
   width: 100%;
@@ -225,6 +229,12 @@ h2 {
 /* Slightly darker background to separate double sections from single - looks nice with single -> double -> single... */
 .people-double {
   background: var(--light-background);
+}
+
+.people-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Each curator/developer div that has an image, header, and description */
@@ -247,6 +257,11 @@ h2 {
   text-align: center;
 }
 
+/* converts each staff image to grayscale */
+.person img {
+  filter: grayscale(100%);
+}
+
 /* Header and description inside info sections */
 .header-and-description,
 .info-image {
@@ -255,6 +270,7 @@ h2 {
   box-sizing: border-box; /* Ensures padding is included in width calculations */
 }
 
+/* mostly footer styling */
 .footer {
   background: var(--dark-green);
   color: white;
@@ -284,6 +300,17 @@ h2 {
   text-transform: uppercase;
 }
 
+.footer-subscript {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-nav a:hover,
+.header-nav a:hover {
+  cursor: pointer;
+  color: var(--lighter-green);
+}
+
 .hero-header {
   color: white;
   margin-bottom: 1.75em;
@@ -299,10 +326,6 @@ h2 {
   flex-direction: row;
   justify-content: center;
   gap: 0.65em;
-}
-
-.orange-text {
-  color: #e7a373;
 }
 
 /* Bottom half of hero header styling */
@@ -329,6 +352,17 @@ h2 {
   justify-content: space-evenly;
   gap: 0.5em;
   padding: 0.75em;
+  padding-top: 1em;
+}
+
+/* past curators section */
+p.past-curators-list {
+  text-align: center;
+  color: var(--lighter-green);
+  font-size: 1.25em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 2em;
 }
 
 .info-image img,
@@ -344,14 +378,6 @@ h2 {
 .section-break-image img {
   width: 12.5em;
   margin: 2em 0em;
-}
-
-.top-margin-h2 {
-  margin-top: 0.75em;
-}
-
-.small-margin-top {
-  margin-top: 1em;
 }
 
 .description p {
@@ -372,6 +398,12 @@ h2 {
 .header-logo {
   display: flex;
   justify-content: center;
+}
+
+/* positions this section above the page rip effect */
+.info-est-1969 {
+  position: relative;
+  z-index: 1000;
 }
 
 /* PAGE RIP ELEMENT - SIZE AND ALIGNMENT */
@@ -409,38 +441,12 @@ img.pagerip {
   margin-top: 0.4em;
 }
 
-.footer-subscript {
-  display: flex;
-  justify-content: center;
-}
-.caption-italics {
-  font-style: italic;
-  font-size: 0.8em;
-  color: var(--light-background);
-  padding: 1em;
-  width: 80%;
-  text-align: center;
-}
-
-.past-curators-list {
-  text-align: center;
-  color: var(--lighter-green);
-  font-size: 1.25em;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-bottom: 3em;
-}
-
 .person-title {
   color: var(--lighter-green);
   font-size: 1.25em;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 0.4em;
-}
-
-.centered-h2 {
-  text-align: center;
 }
 
 .pronouns {
@@ -456,7 +462,43 @@ img.pagerip {
   padding: 0;
 }
 
+/* random, mostly single-use stylings */
+.caption-italics {
+  font-style: italic;
+  font-size: 0.8em;
+  color: var(--light-background);
+  padding: 1em;
+  width: 80%;
+  text-align: center;
+}
+
+.orange-text {
+  color: #e7a373;
+}
+
+.centered-h2 {
+  text-align: center;
+}
+
+.white-background {
+  background: white;
+  width: 100vw;
+}
+
+.top-margin-h2 {
+  margin-top: 0.75em;
+}
+
+.small-margin-top {
+  margin-top: 1em;
+}
+
+/* BELOW ARE MEDIA QUERIES USED TO ADJUST THE STYLING BASED ON SCREEN SIZE:
+The above styles are for the website at the smallest screen sizes (~320px),
+and each subsequent media query makes the styling work above its min-width.*/
+
 @media only screen and (min-width: 425px) {
+  /* person bio images slightly larger */
   .person img {
     width: 16em;
   }
@@ -471,6 +513,7 @@ img.pagerip {
   /* make slightly larger */
   .footer-logo {
     width: 15em;
+    padding-top: 1em;
   }
 
   .header-logo img {
@@ -486,6 +529,7 @@ img.pagerip {
   .section-break-image img {
     width: 12.5em;
   }
+
   /* Nav becomes a vertical list, with added left margin */
   .footer-nav-list {
     flex-direction: column;
@@ -498,8 +542,9 @@ img.pagerip {
     width: 27em;
   }
 
-  .past-curators-list {
+  p.past-curators-list {
     width: 25em;
+    margin-bottom: 3em;
   }
 
   .non-header-footer-content {
@@ -508,11 +553,6 @@ img.pagerip {
 }
 
 @media only screen and (min-width: 725px) {
-  /* needed so that page rip effect doesn't occlude header */
-  .page-rip-margin-top {
-    margin-top: 1.5em;
-  }
-
   /* images and text can scale slightly larger */
   .info-image img,
   .description p {
@@ -563,13 +603,15 @@ img.pagerip {
   .small-margin-top {
     margin: 0;
   }
+
+  /* a little more space between header nav and top of browser */
+  .header-nav-list {
+    padding-top: 1.5em;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
-  /* add more margins so that page rip doesn't cover header */
-  .page-rip-margin-top {
-    margin-top: 2em;
-  }
+  /* add more margins so that there is no white space revealed behind page rip effect */
   img.pagerip {
     margin-top: -2em;
   }
@@ -591,5 +633,12 @@ img.pagerip {
   .icons ul {
     flex-direction: column;
     margin-left: 2.5em;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  /* add more margins so that there is no white space revealed behind page rip effect */
+  img.pagerip {
+    margin-top: -2.5em;
   }
 }

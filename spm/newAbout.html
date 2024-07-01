@@ -14,8 +14,6 @@
 
         REWORKED SPRING 2024
         >AIDAN NESBITT
-
-
                                     -->
 
   <head>
@@ -31,12 +29,12 @@
 
     <!--TITLE OF WEBSITE *CHANGE THIS FOR EACH PAGE-->
     <title>Shakespeare Press Museum | About</title>
-    <!-- REMEMBER TO HAVE ALT ELEMENTS FOR EVERY IMAGE -->
   </head>
 
   <body>
     <main>
       <!-- Refactor this so that (nav, logo?) is within header tag? -->
+      <!-- Header Section: I separated the header into two halves (top-half and bottom-half), and used flexbox to organize them. -->
       <section class="hero-header">
         <img class="cover" src="images/about.jpg" />
         <section class="top-half-container">
@@ -61,6 +59,7 @@
               Celebrating<br /><span class="orange-text">50+</span> Years
             </h2>
           </div>
+          <!-- The icons container switches from a row to column at some specific screen width -->
           <div class="icons">
             <ul>
               <li>
@@ -85,8 +84,10 @@
           </div>
         </section>
       </section>
+      <!-- This section is the main body content that is no the header or the footer. A better name could be used instead of 'non-header-footer-content'. -->
       <section class="non-header-footer-content">
         <img class="pagerip" src="images/paperrip-stretched.png" />
+        <!-- This section contains the est.1969 information and lasts until the section break image.  -->
         <section class="info-est-1969">
           <section class="header-and-description">
             <div class="header-text">
@@ -107,6 +108,7 @@
               alt="Six male students posing around a vintage press machine."
             />
           </div>
+          <!-- Section break image used to visually communicate when a new section of information is starting. -->
           <div class="section-break-image">
             <img
               src="images/sectionBreakDesign.png"
@@ -114,6 +116,7 @@
             />
           </div>
         </section>
+        <!-- Letterpress section! -->
         <section class="info-letterpress">
           <section class="header-and-description">
             <div class="header-text">
@@ -142,6 +145,7 @@
           lettering."
             />
           </div>
+          <!-- Section break image to start new section. -->
           <div class="section-break-image">
             <img
               src="images/sectionBreakDesign.png"
@@ -149,6 +153,7 @@
             />
           </div>
         </section>
+        <!-- Coursework Section -->
         <section class="info-coursework">
           <section class="header-and-description">
             <div class="header-text">
@@ -170,6 +175,7 @@
               alt="A woman working a vintage press."
             />
           </div>
+          <!-- Section break image: End of section. -->
           <div class="section-break-image">
             <img
               src="images/sectionBreakDesign.png"
@@ -177,9 +183,12 @@
             />
           </div>
         </section>
+        <!-- This section holds each of the staff members: curators, facilitator, developers. -->
         <section class="curators-and-developers">
           <h2 class="top-margin-h2">Our Team</h2>
+          <!-- People single sections are only meant to hold one person. -->
           <section class="people-single">
+            <!-- Sage section. -->
             <div class="person">
               <img
                 class="sage"
@@ -203,8 +212,10 @@
               </div>
             </div>
           </section>
+          <!-- People double sections are meant to hold two people. Ideally, the people-double section would apply the flexbox row/grid definition, but I had to add people-container to set this styling -->
           <section class="people-double">
             <div class="people-container">
+              <!-- Bucky section. -->
               <div class="person">
                 <img src="images/BuckyBioPicture.jpg" alt="Bucky Stewart" />
                 <div class="person-information">
@@ -222,6 +233,7 @@
                   </p>
                 </div>
               </div>
+              <!-- Liam section -->
               <div class="person">
                 <img src="images/LiamBioPicture.jpg" alt="Liam Harwood" />
                 <div class="person-information">
@@ -240,6 +252,7 @@
             </div>
           </section>
           <section class="people-single">
+            <!-- Ken section -->
             <div class="person">
               <img class="ken" src="images/kenmacro.jpg" alt="Ken Macro" />
               <div class="person-information">
@@ -262,10 +275,12 @@
             </div>
           </section>
         </section>
+        <!-- Developers section! :) -->
         <section class="curators-and-developers">
           <section class="people-double">
             <h2 class="top-margin-h2">Developers</h2>
             <div class="people-container">
+              <!-- Aidan section. -->
               <div class="person small-margin-top">
                 <img src="images/AidanBioPicture.jpg" alt="Aidan Nesbitt" />
                 <div class="person-information">
@@ -281,6 +296,7 @@
                   </p>
                 </div>
               </div>
+              <!-- Sierra section. -->
               <div class="person last-person-no-margin">
                 <img src="images/sierrabarnes.jpg" alt="Sierra Barnes" />
                 <div class="person-information">
@@ -296,7 +312,7 @@
                 </div>
               </div>
             </div>
-
+            <!-- End of section. -->
             <div class="section-break-image">
               <img
                 src="images/sectionBreakDesign.png"
@@ -305,6 +321,7 @@
             </div>
           </section>
         </section>
+        <!-- Past curator section. -->
         <section class="info-past-curators">
           <section class="header-and-description">
             <div class="header-text">
@@ -319,6 +336,7 @@
           </section>
         </section>
       </section>
+      <!-- Footer Section: also split into two halves for flexbox styling. -->
       <section class="footer">
         <section class="footer-top-half">
           <div class="footer-logo">
@@ -327,6 +345,7 @@
               alt="Shakespeare Press Museum white logo."
             />
           </div>
+          <!-- Footer nav list switches from row to column when there is enough space. -->
           <div class="footer-nav">
             <ul class="footer-nav-list">
               <li class="footer-nav-li"><a href="about.html">About</a></li>
